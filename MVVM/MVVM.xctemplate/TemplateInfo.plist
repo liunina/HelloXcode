@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+	<key>Platforms</key>
+	<array>
+		<string>com.apple.platform.iphoneos</string>
+		<string>com.apple.platform.ipados</string>
+		<string>com.apple.platform.watchos</string>        
+		<string>com.apple.platform.tvos</string>
+	</array>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Component:</string>
+			<key>Description</key>
+			<string>The name of the MVVM component (e.g. for a Login component a LoginViewController and a LoginViewModel will be created)</string>
+			<key>Type</key>
+			<string>text</string>
+			<key>Default</key>
+			<string></string>			
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>viewType</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>View type:</string>
+			<key>Description</key>
+			<string>The type of view to generate</string>
+			<key>Type</key>
+			<string>popup</string>
+			<key>Default</key>
+			<string>View controller</string>
+			<key>Values</key>
+			<array>
+				<string>View controller</string>
+				<string>View</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Description</key>
+                <string>Summary</string>
+				<key>Identifier</key>
+                <string>Summary</string>
+                <key>Name</key>
+                <string>Summary:</string>
+                <key>Required</key>
+                <true/>
+                <key>Type</key>
+                <string>text</string>
+                <key>NotPersisted</key>
+                <true/>
+            </dict>
+	</array>
+</dict>
+</plist>
