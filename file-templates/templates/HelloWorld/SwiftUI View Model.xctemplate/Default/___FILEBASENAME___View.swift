@@ -18,3 +18,9 @@ struct ___VARIABLE_productName:identifier___View: View {
         Text("Hello, ___VARIABLE_productName:identifier___!")
     }
 }
+
+struct ___VARIABLE_productName:identifier___View_Previews: PreviewProvider {
+    static var previews: some View {
+        ___VARIABLE_productName:identifier___View()
+    }
+}

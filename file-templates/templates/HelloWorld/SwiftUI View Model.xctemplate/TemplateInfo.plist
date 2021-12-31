@@ -31,16 +31,38 @@
 		<dict>
 			<key>Identifier</key>
 			<string>productName</string>
-			<key>Required</key>
-			<true/>
 			<key>Name</key>
 			<string>Module name:</string>
 			<key>Description</key>
 			<string>Name of module you want to implement</string>
+			<key>Required</key>
+			<true/>
+			<key>Default</key>
+			<string></string>
 			<key>Type</key>
 			<string>text</string>
-			<key>NotPersisted</key>
-            <true/>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_MODULENAME___</string>
+			<key>Identifier</key>
+			<string>MODULENAME</string>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Add ObservedObject</string>
+			<key>Default</key>
+			<string>false</string>
+			<key>Identifier</key>
+			<string>Binding</string>
+			<key>Name</key>
+			<string>Add ObservedObject</string>
+			<key>Required</key>
+			<string>YES</string>
+			<key>Type</key>
+			<string>checkbox</string>
 		</dict>
 		<dict>
             <key>Description</key>
