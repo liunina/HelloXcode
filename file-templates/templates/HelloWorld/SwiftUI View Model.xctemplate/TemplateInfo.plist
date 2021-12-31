@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>SupportsSwiftPackage</key>
+	<true/>
+	<key>Kind</key>
+	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+	<key>Description</key>
+	<string>A SwiftUI MVVM.</string>
 	<key>AllowedTypes</key>
 	<array>
 		<string>public.swift-source</string>
@@ -9,13 +15,13 @@
 	<key>Platforms</key>
 	<array>
 		<string>com.apple.platform.iphoneos</string>
+		<string>com.apple.platform.ipados</string>
+		<string>com.apple.platform.macos</string>
+		<string>com.apple.platform.watchos</string>        
+		<string>com.apple.platform.tvos</string>
 	</array>
 	<key>DefaultCompletionName</key>
-	<string>SwiftUIMVVM</string>
-	<key>Description</key>
-	<string>SwiftUI MVVM Components</string>
-	<key>Kind</key>
-	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+	<string>File</string>
 	<key>MainTemplateFile</key>
 	<string>___FILEBASENAME___.swift</string>
 	<key>SortOrder</key>
@@ -23,32 +29,32 @@
 	<key>Options</key>
 	<array>
 		<dict>
-			<key>Description</key>
-			<string>Name of module you want to implement</string>
-			<key>Default</key>
-			<string></string>
 			<key>Identifier</key>
-			<string>MODULENAME</string>
+			<string>productName</string>
+			<key>Required</key>
+			<true/>
 			<key>Name</key>
 			<string>Module name:</string>
-			<key>Required</key>
-			<string>YES</string>
+			<key>Description</key>
+			<string>Name of module you want to implement</string>
 			<key>Type</key>
 			<string>text</string>
+			<key>NotPersisted</key>
+            <true/>
 		</dict>
 		<dict>
             <key>Description</key>
-                <string>Summary</string>
-                <key>Identifier</key>
-                        <string>Summary</string>
-                        <key>Name</key>
-                        <string>Summary:</string>
-                        <key>Required</key>
-                        <true/>
-                        <key>Type</key>
-                        <string>text</string>
-                        <key>NotPersisted</key>
-                        <true/>
+            <string>Summary</string>
+            <key>Identifier</key>
+            <string>Summary</string>
+            <key>Name</key>
+            <string>Summary:</string>
+            <key>Required</key>
+            <true/>
+			<key>Type</key>
+            <string>text</string>
+            <key>NotPersisted</key>
+            <true/>
         </dict>
 	</array>
 </dict>
