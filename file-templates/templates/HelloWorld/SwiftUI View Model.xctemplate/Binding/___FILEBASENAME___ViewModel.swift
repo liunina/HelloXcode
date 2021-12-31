@@ -11,8 +11,7 @@ import Foundation
 
 class ___VARIABLE_productName:identifier___ViewModel: ObservableObject {
 
-    // eg: activate for nothing!
-    @Published private var activate: Bool = false
+    @Published var text: String = "Hello, World!"
     @Published private (set) var actions: [Int] = []
     
     init() {

@@ -15,7 +15,7 @@ struct ___VARIABLE_productName:identifier___View: View {
     @StateObject var viewModel = ___VARIABLE_productName:identifier___ViewModel()
 
     var body: some View {
-        Text("Hello, ___VARIABLE_productName:identifier___!")
+        Text("\(viewModel.text)")
     }
 }
 
