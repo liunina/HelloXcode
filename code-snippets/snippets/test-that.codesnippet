@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>tt</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>func testThat_&lt;#whenThis#&gt;_&lt;#thenThat#&gt;() {
+    // Arrange
+    &lt;#arrange#&gt;
+    
+    // Act
+    &lt;#act#&gt;
+    
+    // Assert
+    &lt;#assert#&gt;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>CB5270B6-10B7-40CA-B8CB-CE7464810FE4</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Creates a unit test method</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Test That</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

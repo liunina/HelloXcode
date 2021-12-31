@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>rxtest</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>func testThat_when_then() {
+    // Arrange
+    let expectedValue: &lt;#expectedValue or values#&gt;
+    let expectedEvents: [Recorded&lt;Event&lt;&lt;#event type#&gt;&gt;&gt;] = [
+    .next(0, &lt;#expected value#&gt;),
+//        .completed(0)
+    ]
+    let observer = scheduler.createObserver(&lt;#event type#&gt;.self)
+        
+    // Act
+    &lt;#rx_stuff#&gt;.disposed(by: disposeBag)
+    scheduler.start()
+        
+    // Assert
+    XCTAssertEqual(observer.events, expectedEvents)
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>EDD4E5FF-A81D-49D4-A1CD-7B6BC63EEEC1</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Rx-based unit test</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
