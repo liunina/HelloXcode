@@ -28,6 +28,6 @@ extension ___VARIABLE_MODULENAME___View {
     
     @ViewBuilder
     private func Content(_ viewStore: ViewStore<___VARIABLE_MODULENAME___State, ___VARIABLE_MODULENAME___Action>) -> some View {
-        Text("Hello \(___VARIABLE_MODULENAME___)!")
+        Text("Hello ___VARIABLE_MODULENAME___!")
     }
 }
