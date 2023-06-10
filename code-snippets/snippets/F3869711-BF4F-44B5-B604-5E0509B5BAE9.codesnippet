@@ -3,21 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>stt</string>
+	<string></string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@State private var &lt;#name#&gt;</string>
+	<string>##.snp.makeConstraints { make in
+            make.width.equalTo(100)
+            make.height.equalTo(98)
+            make.centerY.equalToSuperview()
+            make.right.equalToSuperview().offset(-27)
+        }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>8E3A09FF-557C-4898-A99A-07A83BAEF0C5</string>
+	<string>F3869711-BF4F-44B5-B604-5E0509B5BAE9</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Create a private property decorated with @State property wrapper</string>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>SwiftUI State property</string>
+	<string>ls_make</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

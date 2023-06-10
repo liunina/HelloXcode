@@ -3,21 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>stt</string>
+	<string>ocif</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@State private var &lt;#name#&gt;</string>
+	<string>  if (&lt;#condition#&gt;) {
+        &lt;#statements#&gt;
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>8E3A09FF-557C-4898-A99A-07A83BAEF0C5</string>
+	<string>B01CB457-3334-4CF9-8D25-E77E41F0D538</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Create a private property decorated with @State property wrapper</string>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>SwiftUI State property</string>
+	<string>If Statement</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

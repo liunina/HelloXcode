@@ -6,13 +6,12 @@
 	<string>mark</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
-		<string>CodeBlock</string>
 		<string>TopLevel</string>
+		<string>CodeBlock</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>// MARK: - &lt;#Section name#&gt;
-</string>
+	<string>// MARK: - &lt;#Section name#&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>71B875AE-A97A-42F4-99F1-6BE8D14C25BB</string>
 	<key>IDECodeSnippetLanguage</key>

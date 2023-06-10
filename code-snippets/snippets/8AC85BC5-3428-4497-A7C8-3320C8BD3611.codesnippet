@@ -3,21 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>stt</string>
+	<string>lz_content</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@State private var &lt;#name#&gt;</string>
+	<string>private lazy var &lt;#contentView#&gt;: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        return view
+    }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>8E3A09FF-557C-4898-A99A-07A83BAEF0C5</string>
+	<string>8AC85BC5-3428-4497-A7C8-3320C8BD3611</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Create a private property decorated with @State property wrapper</string>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>SwiftUI State property</string>
+	<string>Lazy ContentView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

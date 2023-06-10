@@ -3,21 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>stt</string>
+	<string>lz_Label</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@State private var &lt;#name#&gt;</string>
+	<string>    private lazy var &lt;#property name#&gt;: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
+        label.textColor = UIColor.darkText
+        label.text = ""
+        return label
+    }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>8E3A09FF-557C-4898-A99A-07A83BAEF0C5</string>
+	<string>044E39AE-B547-497A-9A1D-F8586C47FEE9</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Create a private property decorated with @State property wrapper</string>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>SwiftUI State property</string>
+	<string>Lazy Label</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

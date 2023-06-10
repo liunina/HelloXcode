@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>sMark</string>
+	<string>snippetMark</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -13,7 +13,7 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>B104C8B3-11D8-481F-A6BE-04A53D3DECC2</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string>Add a MARK with a placeholder name</string>
 	<key>IDECodeSnippetTitle</key>
