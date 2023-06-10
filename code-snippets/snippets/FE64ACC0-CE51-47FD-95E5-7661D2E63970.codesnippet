@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>oc_lz_button</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)onActionWithButton:(UIButton *)sender {
+    
+}
+
+- (UIButton *)backButton {
+    if (!_backButton) {
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.bounds = CGRectMake(0, 0, 100, 50);
+        button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        [button setTitle:@"button" forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"back_icon_arrow"] forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(onActionWithButton:) forControlEvents:UIControlEventTouchUpInside];
+        button.tintColor = UIColor.whiteColor;
+        [self.view addSubview:button];
+        _backButton = button;
+    }
+    return _backButton;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>FE64ACC0-CE51-47FD-95E5-7661D2E63970</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Objective-C Lazy UIButton</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>oc_prow</string>
+	<string>bnd</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceMethods</string>
-		<string>ClassInterfaceVariables</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, readonly, weak) IBOutlet &lt;#type#&gt; *&lt;#name#&gt;;
-</string>
+	<string>@Binding private var &lt;#name#&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D91CEB20-5E84-4ADE-B491-52C72E524A4A</string>
+	<string>3E934334-95A7-4B20-A8EB-45B3C1AC5D09</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Defines a property</string>
+	<string>Create a private property decorated with @Binding property wrapper</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Property weak</string>
+	<string>SwiftUI Binding property</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

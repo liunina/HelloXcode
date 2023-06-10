@@ -3,26 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>oc_prow</string>
+	<string>oc_block_create</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceMethods</string>
-		<string>ClassInterfaceVariables</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, readonly, weak) IBOutlet &lt;#type#&gt; *&lt;#name#&gt;;
-</string>
+	<string>typedef void (^&lt;#block_name#&gt;) (&lt;#type#&gt; * _Nonnull &lt;#name#&gt;)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D91CEB20-5E84-4ADE-B491-52C72E524A4A</string>
+	<string>300D6A35-6EEF-468A-83D3-EF91B50D10FB</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Defines a property</string>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Property weak</string>
+	<string>Objective-C</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

@@ -3,26 +3,33 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>oc_prow</string>
+	<string>oc_lz_imageView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceMethods</string>
-		<string>ClassInterfaceVariables</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, readonly, weak) IBOutlet &lt;#type#&gt; *&lt;#name#&gt;;
+	<string>- (UIImageView *)imageView {
+    if (!_imageView) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+        [self.contentView addSubview:imageView];
+       
+        _imageView = imageView;
+    }
+    return _imageView;
+}
 </string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D91CEB20-5E84-4ADE-B491-52C72E524A4A</string>
+	<string>20F2AE24-36D5-4E0C-AB91-CD81D9D73C4F</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Defines a property</string>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Property weak</string>
+	<string>Objective-C Lazy UIImageView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

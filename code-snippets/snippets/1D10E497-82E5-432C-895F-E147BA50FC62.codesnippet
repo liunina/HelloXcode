@@ -3,23 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>oc_prow</string>
+	<string>markg</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceMethods</string>
-		<string>ClassInterfaceVariables</string>
+		<string>TopLevel</string>
+		<string>CodeBlock</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, readonly, weak) IBOutlet &lt;#type#&gt; *&lt;#name#&gt;;
+	<string>// MARK: - &lt;#Section name#&gt;
 </string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D91CEB20-5E84-4ADE-B491-52C72E524A4A</string>
+	<string>1D10E497-82E5-432C-895F-E147BA50FC62</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Defines a property</string>
+	<string>Adds Mark: - delimited in code</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Property weak</string>
+	<string>Mark - Generic</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

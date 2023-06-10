@@ -3,26 +3,31 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>oc_prow</string>
+	<string>oc_lz_view</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceMethods</string>
-		<string>ClassInterfaceVariables</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, readonly, weak) IBOutlet &lt;#type#&gt; *&lt;#name#&gt;;
-</string>
+	<string>- (UIView *)contentView {
+    if (!_contentView&lt;##&gt;) {
+        UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
+        [self addSubview:view];
+        _contentView = view;
+    }
+    return _contentView;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D91CEB20-5E84-4ADE-B491-52C72E524A4A</string>
+	<string>6ADBF131-FCFE-49D4-BA3D-CDE71E72A9B8</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>Defines a property</string>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Property weak</string>
+	<string>Objecitve-C Lazy get UIView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

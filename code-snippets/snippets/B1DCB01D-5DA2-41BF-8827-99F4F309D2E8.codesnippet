@@ -3,25 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>oc_proc</string>
+	<string>oc_lz_label</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceMethods</string>
-		<string>ClassInterfaceVariables</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, copy) &lt;#type#&gt; *&lt;#name#&gt;;</string>
+	<string>- (UILabel *)nameLabel {
+    if (!_nameLabel) {
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+        label.font = [UIFont systemFontOfSize:12];
+        label.textColor = [UIColor darkTextColor];
+        label.textAlignment = NSTextAlignmentLeft;
+        [self.contentView addSubview:label];
+        _nameLabel = label;
+    }
+    return _nameLabel;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>D2B4829B-88E4-486A-B541-B178CFA7F5F4</string>
+	<string>B1DCB01D-5DA2-41BF-8827-99F4F309D2E8</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Property copy</string>
+	<string>Objective-C Lazy get UILabel</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
