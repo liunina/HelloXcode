@@ -4,7 +4,7 @@
 #import "___VARIABLE_productName___ViewModel.h"
 
 @interface ___VARIABLE_productName:identifier___View ()
-@property (nonatomic, strong) <#type#> *viewModel;
+@property (nonatomic, strong) ___VARIABLE_productName___ViewModel *viewModel;
 
 @end
 
@@ -18,7 +18,7 @@
     return self;
 }
 
-- (instancetype)initWithViewModel:(<#type#> *)viewModel {
+- (instancetype)initWithViewModel:(___VARIABLE_productName___ViewModel *)viewModel {
     self = [super init];
     if (self) {
         self.viewModel = viewModel;
@@ -38,7 +38,7 @@
 }
 
 #pragma mark - getter/setter
-- (void)setViewModel:(<#type#> *)viewModel {
+- (void)setViewModel:(___VARIABLE_productName___ViewModel *)viewModel {
     if (_viewModel != viewModel) {
         _viewModel = viewModel;
         [self onSetuBinding];
