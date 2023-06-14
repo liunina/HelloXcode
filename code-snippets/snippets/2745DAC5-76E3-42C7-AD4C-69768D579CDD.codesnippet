@@ -3,29 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>rac_subject</string>
+	<string>oc_method_create</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (RACSubject &lt;NSNumber *&gt;*)&lt;#subject#&gt; {
-    if (!_&lt;#subject#&gt;) {
-        _&lt;#subject#&gt; = [RACSubject subject];
-    }
-    return _&lt;#subject#&gt;;
+	<string>- (void)&lt;#methodName#&gt; {
+    // TODO: implement
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>C696BB7D-538C-4646-9E77-5EC684F21A67</string>
+	<string>2745DAC5-76E3-42C7-AD4C-69768D579CDD</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>RAC Subject</string>
+	<string>Method Create</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

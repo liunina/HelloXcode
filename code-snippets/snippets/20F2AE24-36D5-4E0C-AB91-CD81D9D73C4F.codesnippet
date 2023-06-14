@@ -9,14 +9,14 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (UIImageView *)imageView {
-    if (!_imageView) {
+	<string>- (UIImageView *)&lt;#imageView#&gt; {
+    if (!&lt;#_imageView#&gt;) {
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
         [self.contentView addSubview:imageView];
        
-        _imageView = imageView;
+        &lt;#_imageView#&gt; = imageView;
     }
-    return _imageView;
+    return &lt;#_imageView#&gt;;
 }
 </string>
 	<key>IDECodeSnippetIdentifier</key>
@@ -30,6 +30,6 @@
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

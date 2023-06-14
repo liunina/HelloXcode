@@ -9,16 +9,16 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (UILabel *)nameLabel {
-    if (!_nameLabel) {
+	<string>- (UILabel *)&lt;#nameLabel#&gt; {
+    if (!&lt;#nameLabel#&gt;) {
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
         label.font = [UIFont systemFontOfSize:12];
         label.textColor = [UIColor darkTextColor];
         label.textAlignment = NSTextAlignmentLeft;
         [self.contentView addSubview:label];
-        _nameLabel = label;
+        &lt;#nameLabel#&gt; = label;
     }
-    return _nameLabel;
+    return &lt;#nameLabel#&gt;;
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>B1DCB01D-5DA2-41BF-8827-99F4F309D2E8</string>
@@ -31,6 +31,6 @@
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>
