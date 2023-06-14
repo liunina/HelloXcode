@@ -28,7 +28,7 @@
 #pragma mark - getter
 - (___VARIABLE_productName___View *)productView {
     if (!_productView) {
-        ProductView *view = [[ProductView alloc] initWithFrame:CGRectZero];
+        ___VARIABLE_productName___View *view = [[___VARIABLE_productName___View alloc] initWithFrame:CGRectZero];
         [self.view addSubview:view];
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.inset(0);

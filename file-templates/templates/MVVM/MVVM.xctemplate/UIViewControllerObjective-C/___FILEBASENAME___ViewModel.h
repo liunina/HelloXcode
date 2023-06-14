@@ -1,4 +1,5 @@
 //___FILEHEADER___
+//  Summary: ___VARIABLE_Summary___
 
 ___IMPORTHEADER_cocoaTouchSubclass___
 
