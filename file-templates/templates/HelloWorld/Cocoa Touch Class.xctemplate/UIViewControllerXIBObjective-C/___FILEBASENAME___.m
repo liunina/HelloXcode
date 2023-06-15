@@ -8,6 +8,11 @@
 
 @implementation ___FILEBASENAMEASIDENTIFIER___
 
++ (instancetype)createFromNib {
+    ___FILEBASENAMEASIDENTIFIER___ *viewController = [[___FILEBASENAMEASIDENTIFIER___ alloc] initWithNibName:@"___FILEBASENAMEASIDENTIFIER___" bundle:nil];
+    return viewController;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
