@@ -1,6 +1,7 @@
 //___FILEHEADER___
 
 #import "___FILEBASENAME___.h"
+#import "___VARIABLE_productName___Model.h"
 
 @interface ___FILEBASENAMEASIDENTIFIER___ ()
 @property (nonatomic, weak) IBOutlet UIView *containerView;
