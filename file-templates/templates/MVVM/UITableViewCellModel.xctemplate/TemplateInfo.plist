@@ -2,12 +2,21 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>SupportsSwiftPackage</key>
+	<true/>
 	<key>Kind</key>
-	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+	<string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
+	<key>Description</key>
+	<string>A Cocoa Touch class.</string>
+	<key>Summary</key>
+	<string>A Cocoa Touch class</string>
+	<key>SortOrder</key>
+	<string>2</string>
+	<key>DefaultCompletionName</key>
+	<string>MyClass</string>
 	<key>Platforms</key>
 	<array>
 		<string>com.apple.platform.iphoneos</string>
-		<string>com.apple.platform.ipados</string>
 	</array>
 	<key>Options</key>
 	<array>
@@ -17,15 +26,15 @@
 			<key>Required</key>
 			<true/>
 			<key>Name</key>
-			<string>Component:</string>
+			<string>Class:</string>
 			<key>Description</key>
-			<string>The name of the MVVM component (e.g. for a Login component a LoginViewController and a LoginViewModel will be created)</string>
+			<string>The name of the class to create</string>
 			<key>Type</key>
 			<string>text</string>
-			<key>Default</key>
-			<string></string>			
+			<key>NotPersisted</key>
+			<true/>
 		</dict>
-			<dict>
+		<dict>
 			<key>Identifier</key>
 			<string>cocoaTouchSubclass</string>
 			<key>Required</key>
@@ -37,30 +46,45 @@
 			<key>Type</key>
 			<string>class</string>
 			<key>Default</key>
-			<string>NSObject</string>
+			<string>UITableViewCell</string>
 			<key>FallbackHeader</key>
 			<string>#import &lt;UIKit/UIKit.h&gt;</string>
 			<key>Values</key>
 			<array>
-				<string>UIView</string>
-				<string>UIViewController</string>
+				<string>UITableViewCell</string>
+				<string>UICollectionViewCell</string>
 			</array>
+			<key>Suffixes</key>
+			<dict>
+				<key>UITableViewCell</key>
+				<string>TableViewCell</string>
+				<key>UICollectionViewCell</key>
+				<string>CollectionViewCell</string>
+			</dict>
 		</dict>
 		<dict>
-			<key>Description</key>
-			<string>Summary</string>
 			<key>Identifier</key>
-            <string>Summary</string>
-            <key>Name</key>
-            <string>Summary:</string>
-            <key>Required</key>
-            <true/>
-            <key>Type</key>
-            <string>text</string>
-            <key>NotPersisted</key>
-            <true/>
-        </dict>
-        <dict>
+			<string>XIB</string>
+			<key>Name</key>
+			<string>Also create XIB file</string>
+			<key>Description</key>
+			<string>Whether to create a XIB file with the same name</string>
+			<key>Type</key>
+			<string>checkbox</string>
+			<key>RequiredOptions</key>
+			<dict>
+				<key>cocoaTouchSubclass</key>
+				<array>
+					<string>UITableViewCell</string>
+					<string>UICollectionViewCell</string>
+				</array>
+			</dict>
+			<key>Default</key>
+			<string>false</string>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+		<dict>
 			<key>Identifier</key>
 			<string>languageChoice</string>
 			<key>Required</key>

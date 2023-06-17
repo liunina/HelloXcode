@@ -1,10 +1,11 @@
 //___FILEHEADER___
 
 #import "___FILEBASENAME___.h"
-#import "___FILEBASENAME___ViewModel.h"
+#import "___VARIABLE_productName___ViewModel.h"
 
 @interface ___VARIABLE_productName:identifier___View ()
 @property (nonatomic, strong) ___VARIABLE_productName___ViewModel *viewModel;
+@property (nonatomic, strong) UIView *contentView;
 
 @end
 
@@ -43,6 +44,15 @@
         _viewModel = viewModel;
         [self onSetuBinding];
     }
+}
+
+- (UIView *)contentView {
+    if (!_contentView) {
+        UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
+        [self addSubview:view];
+        _contentView = view;
+    }
+    return _contentView;
 }
 
 @end
