@@ -16,4 +16,22 @@
     return self;
 }
 
+#pragma mark - ___VARIABLE_productName:identifier___ViewModelDatasource
+
+- (NSInteger)numberOfSections {
+    return 0;
+}
+
+- (NSInteger)numberOfRowsInSection:(NSInteger)section {
+    return 0;
+}
+
+- (id)itemForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return nil;
+}
+
+- (void)onSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
 @end

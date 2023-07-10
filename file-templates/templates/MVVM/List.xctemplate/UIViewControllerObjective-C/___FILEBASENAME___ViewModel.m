@@ -16,7 +16,6 @@
     return self;
 }
 
-
 #pragma mark - ___VARIABLE_productName:identifier___ViewModelDatasource
 
 - (NSInteger)numberOfSections {
@@ -32,7 +31,7 @@
 }
 
 - (void)onSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+
 }
 
 @end
