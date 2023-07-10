@@ -2,6 +2,7 @@
 
 #import "___FILEBASENAME___.h"
 #import "___VARIABLE_productName___ViewModel.h"
+#import <Masonry/Masonry.h>
 
 @interface ___VARIABLE_productName:identifier___View ()
 @property (nonatomic, strong) ___VARIABLE_productName___ViewModel *viewModel;
@@ -50,6 +51,9 @@
     if (!_contentView) {
         UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
         [self addSubview:view];
+        [view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.inset(0);
+        }];
         _contentView = view;
     }
     return _contentView;

@@ -62,20 +62,6 @@
         </dict>
         <dict>
 			<key>Identifier</key>
-            <string>mainViewName</string>
-            <key>Required</key>
-            <true/>
-            <key>Name</key>
-            <string>MainView:</string>
-            <key>Description</key>
-			<string>Main View Class Name when productName is UIViewController</string>
-            <key>Type</key>
-            <string>text</string>
-            <key>NotPersisted</key>
-            <true/>
-        </dict>
-        <dict>
-			<key>Identifier</key>
 			<string>languageChoice</string>
 			<key>Required</key>
 			<true/>
