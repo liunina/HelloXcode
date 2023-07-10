@@ -3,29 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lz_Label</string>
+	<string>lz_button</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
-		<string>TopLevel</string>
-		<string>CodeExpression</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    private lazy var &lt;#property name#&gt;: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
-        label.textColor = UIColor.darkText
-        label.text = ""
-        return label
-    }()</string>
+	<string>   lazy var &lt;#property name#&gt;: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setImage(&lt;#T##image: UIImage?##UIImage?#&gt;, for: .normal)
+        button.setImage(&lt;#T##image: UIImage?##UIImage?#&gt;, for: .selected)
+        button.addTarget(self, action: #selector(onButtonTapAction(_ :)), for: .touchUpInside)
+        return button
+    }()
+    
+    // event
+    @objc private func onButtonTapAction(_ sender: UIButton) {
+    
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>044E39AE-B547-497A-9A1D-F8586C47FEE9</string>
+	<string>9602F59F-A8E6-457E-AFC9-8E94EDA22A89</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Lazy Label</string>
+	<string>Lazy Button</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

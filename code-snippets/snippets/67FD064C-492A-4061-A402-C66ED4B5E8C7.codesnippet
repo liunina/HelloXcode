@@ -3,21 +3,30 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>oc_proa</string>
+	<string>lz_searchbar</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, assign) &lt;#type#&gt; &lt;#name#&gt;;</string>
+	<string>    lazy var searchBar: UISearchBar = {
+        let view = UISearchBar.init()
+        view.searchBarStyle = .minimal
+        view.placeholder = "搜索"
+        view.searchTextField.backgroundColor = .white
+        view.searchTextField.borderStyle = .none
+        view.searchTextField.layer.cornerRadius = 10
+        view.delegate = self
+        return view
+    }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>F530FAAD-FF1C-4F3E-B4CC-5536A8813F0F</string>
+	<string>67FD064C-492A-4061-A402-C66ED4B5E8C7</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Property assign</string>
+	<string>Lazy UISearchBar</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

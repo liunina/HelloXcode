@@ -6,8 +6,7 @@
 	<string>oc_proc</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceMethods</string>
-		<string>ClassInterfaceVariables</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>@property (nonatomic, copy) &lt;#type#&gt; *&lt;#name#&gt;;</string>

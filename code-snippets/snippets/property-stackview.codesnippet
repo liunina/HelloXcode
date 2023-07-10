@@ -9,15 +9,25 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>&lt;#modifier#&gt; lazy var &lt;#name#&gt;StackView: UIStackView = {
-        let stackView = UIStackView()
-stackView.addArrangedSubview(&lt;#firstSubview#&gt;)
-		stackView.axis = &lt;#axis#&gt;
-		stackView.distribution = &lt;#distribution#&gt;
-		stackView.alignment = &lt;#alignment#&gt;
-        return stackView
-    }()
-</string>
+	<string>// Adapted to ARC from Matt Gallagher of CocoaWithLove
+// Insert into in .pch to use in a project
+#define SYNTHESIZE_SINGLETON_FOR_HEADER(classname) \
++ (classname *)sharedInstance;
+
+#define SYNTHESIZE_SINGLETON_FOR_CLASS(classname) \
+ \
+    static classname *sharedInstance = nil; \
+    static dispatch_once_t onceToken; \
+ \
++ (classname *)sharedInstance \
+{ \
+    dispatch_once(&amp;onceToken, ^{ \
+        sharedInstance = [[classname alloc] init]; \
+    }); \
+	 \
+	return sharedInstance; \
+} \
+ \</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>166AD741-413C-4FDE-A085-2CD614DFEC40</string>
 	<key>IDECodeSnippetLanguage</key>

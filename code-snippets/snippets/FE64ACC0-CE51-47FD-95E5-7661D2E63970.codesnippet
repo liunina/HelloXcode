@@ -13,19 +13,19 @@
     
 }
 
-- (UIButton *)backButton {
-    if (!_backButton) {
+- (UIButton *)&lt;#button#&gt; {
+    if (!&lt;#button#&gt;) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.bounds = CGRectMake(0, 0, 100, 50);
         button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        button.tintColor = UIColor.whiteColor;
         [button setTitle:@"button" forState:UIControlStateNormal];
         [button setImage:[UIImage imageNamed:@"back_icon_arrow"] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(onActionWithButton:) forControlEvents:UIControlEventTouchUpInside];
-        button.tintColor = UIColor.whiteColor;
         [self.view addSubview:button];
-        _backButton = button;
+        &lt;#button#&gt; = button;
     }
-    return _backButton;
+    return &lt;#button#&gt;;
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>FE64ACC0-CE51-47FD-95E5-7661D2E63970</string>

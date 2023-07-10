@@ -9,13 +9,13 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (UIView *)contentView {
-    if (!_contentView&lt;##&gt;) {
+	<string>- (UIView *)&lt;#view#&gt; {
+    if (!&lt;#view#&gt;) {
         UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
         [self addSubview:view];
-        _contentView = view;
+        &lt;#view#&gt; = view;
     }
-    return _contentView;
+    return &lt;#view#&gt;;
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>6ADBF131-FCFE-49D4-BA3D-CDE71E72A9B8</string>

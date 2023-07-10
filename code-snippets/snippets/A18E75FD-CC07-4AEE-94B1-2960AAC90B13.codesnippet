@@ -19,6 +19,7 @@
         view.showsHorizontalScrollIndicator = NO;
         view.separatorStyle = UITableViewCellSeparatorStyleNone;
         [view registerClass:&lt;#(nullable Class)#&gt; forCellReuseIdentifier:@""];
+        
         if(@available(iOS 11.0, *)) {
             view.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
