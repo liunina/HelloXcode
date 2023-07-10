@@ -3,7 +3,7 @@
 
 import UIKit
 
-final class ___VARIABLE_mainViewName:identifier___View: UIView {
+final class ___VARIABLE_productName:identifier___View: UIView {
     
     // MARK: - Private properties
     
@@ -19,5 +19,27 @@ final class ___VARIABLE_mainViewName:identifier___View: UIView {
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: - UIComponents
+
+    // 视图加载
+    private func addUIComponents() {
+
+    }
+    
+    // 布局
+    private func layoutUIComponents() {
+ 
+    }
+    
+    // UI更新
+    private func updateUIComponents() {
+
+    }
+    
+    // 数据绑定
+    private func setupBindings() {
+        
     }
 }

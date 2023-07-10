@@ -10,8 +10,8 @@ final class ___VARIABLE_productName:identifier___ViewController: UIViewControlle
     
     private let viewModel: ___VARIABLE_productName:identifier___ViewModel
     
-    lazy var mainView: ___VARIABLE_productName:identifier___View = {
-        let mainView = ___VARIABLE_productName:identifier___View(viewModel: self.viewModel)
+    lazy var mainView: ___VARIABLE_mainViewName:identifier___View = {
+        let mainView = ___VARIABLE_mainViewName:identifier___View(viewModel: self.viewModel)
         self.view.addSubview(mainView)
         mainView.snp.makeConstraints { make in
             make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
@@ -42,5 +42,17 @@ final class ___VARIABLE_productName:identifier___ViewController: UIViewControlle
 
     override public var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+
+    func addUIComponents() {
+
+    }
+    
+    func layoutUIComponents() {
+
+    }
+    
+    func setupBindings() {
+         
     }
 }
