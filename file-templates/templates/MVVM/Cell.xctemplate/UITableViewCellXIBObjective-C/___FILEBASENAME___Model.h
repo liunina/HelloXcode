@@ -1,6 +1,6 @@
 //___FILEHEADER___
 
-___IMPORTHEADER_cocoaTouchSubclass___
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

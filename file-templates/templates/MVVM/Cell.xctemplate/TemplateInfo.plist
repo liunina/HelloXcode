@@ -40,27 +40,18 @@
 			<key>Required</key>
 			<string>YES</string>
 			<key>Name</key>
-			<string>Subclass of:</string>
+			<string>List class of:</string>
 			<key>Description</key>
 			<string>What class to subclass in the new file</string>
 			<key>Type</key>
-			<string>class</string>
+			<string>popup</string>
 			<key>Default</key>
 			<string>UITableViewCell</string>
-			<key>FallbackHeader</key>
-			<string>#import &lt;UIKit/UIKit.h&gt;</string>
 			<key>Values</key>
 			<array>
 				<string>UITableViewCell</string>
 				<string>UICollectionViewCell</string>
 			</array>
-			<key>Suffixes</key>
-			<dict>
-				<key>UITableViewCell</key>
-				<string>TableViewCell</string>
-				<key>UICollectionViewCell</key>
-				<string>CollectionViewCell</string>
-			</dict>
 		</dict>
 		<dict>
 			<key>Identifier</key>
