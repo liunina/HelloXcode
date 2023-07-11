@@ -17,13 +17,8 @@ final class ___VARIABLE_productName:identifier___View: UIView {
     @IBOutlet private var contentView: UIView!
     
     // MARK: - Init
-
-    convenience init(viewModel: ___VARIABLE_productName:identifier___ViewModel) {
-        self.init(frame: .zero)
-        self.viewModel = viewModel
-    }
-
-    public override init(frame: CGRect) {
+    
+    public override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         onLoadNibUIComponents()
     }
@@ -59,12 +54,11 @@ final class ___VARIABLE_productName:identifier___View: UIView {
  
     // UI更新
     private func onUpdateUIComponents() {
-
+        guard let viewModel = self.viewModel else { return }
     }
     
     // 数据绑定
     private func onSetupBindings() {
-        guard let _ = self.viewModel else { return }
         onUpdateUIComponents()
     }
 }

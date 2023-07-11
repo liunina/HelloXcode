@@ -3,7 +3,7 @@
 
 import UIKit
 
-final class ___VARIABLE_mainViewName:identifier___View: UIView {
+final class ___VARIABLE_productName:identifier___View: UIView {
     
     // MARK: - Private properties
     
