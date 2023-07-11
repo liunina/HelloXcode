@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (id)itemForRowAtIndexPath:(NSIndexPath *)indexPath;
 
+- (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+
 - (void)onSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
