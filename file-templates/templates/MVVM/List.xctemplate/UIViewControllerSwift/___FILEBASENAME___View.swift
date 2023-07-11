@@ -7,7 +7,7 @@ final class ___VARIABLE_productName:identifier___View: UIView {
     
     // MARK: - Private properties
     
-    private var viewModel: ___VARIABLE_productName:identifier___ViewModel {
+    private var viewModel: ___VARIABLE_productName:identifier___ViewModel? {
         didSet {
             setupBindings()
         }
@@ -28,7 +28,7 @@ final class ___VARIABLE_productName:identifier___View: UIView {
         tableView.separatorInset = UIEdgeInsets(top:0, left:0, bottom: 0, right: 0)
         tableView.contentInset = UIEdgeInsets(top:0, left:0, bottom: 0, right:0)
         tableView.separatorColor = UIColor(red: 219/255.0, green: 219/255.0, blue: 219/255.0, alpha: 1)
-        tableView.register(<#Cell#>.self, forCellReuseIdentifier:<#Cell#>.className)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier:"UITableViewCell")
         return tableView
     }()
 
@@ -54,7 +54,7 @@ final class ___VARIABLE_productName:identifier___View: UIView {
     }
     
     // MARK: - UIComponents
-    
+
     func addUIComponents() {
         addSubview(tableView)
     }
