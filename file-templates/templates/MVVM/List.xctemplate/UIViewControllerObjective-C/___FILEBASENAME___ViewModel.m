@@ -31,7 +31,7 @@
 }
 
 - (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44
+    return 44;
 }
 
 - (void)onSelectRowAtIndexPath:(NSIndexPath *)indexPath {

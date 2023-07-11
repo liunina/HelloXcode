@@ -16,4 +16,10 @@
     return self;
 }
 
+#pragma mark - ___VARIABLE_productName:identifier___ModelDatasource
+
+- (CGFloat)rowHeight {
+    return 44.0;
+}
+
 @end
