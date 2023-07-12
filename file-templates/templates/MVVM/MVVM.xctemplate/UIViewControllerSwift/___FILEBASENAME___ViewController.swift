@@ -12,13 +12,6 @@ final class ___VARIABLE_productName:identifier___ViewController: UIViewControlle
     
     lazy var mainView: ___VARIABLE_productName:identifier___View = {
         let mainView = ___VARIABLE_productName:identifier___View(viewModel: self.viewModel)
-        self.view.addSubview(mainView)
-        mainView.snp.makeConstraints { make in
-            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
-            make.left.equalTo(self.view.snp.left)
-            make.right.equalTo(self.view.snp.right)
-            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
-        }
         return mainView
     }()
 
@@ -39,17 +32,18 @@ final class ___VARIABLE_productName:identifier___ViewController: UIViewControlle
     }
 
     // MARK: override
-
-    override public var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-
+    
     func addUIComponents() {
-
+      self.view.addSubview(mainView)
     }
     
     func layoutUIComponents() {
-
+        mainView.snp.makeConstraints { make in
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
+            make.left.equalTo(self.view.snp.left)
+            make.right.equalTo(self.view.snp.right)
+            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
+        }
     }
     
     func setupBindings() {

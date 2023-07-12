@@ -13,7 +13,13 @@ final class ___VARIABLE_productName:identifier___View: UIView {
             setupBindings()
         }
     }
-    
+
+    private lazy var contentView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .clear
+        return view
+    }()
+
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.dataSource = self
@@ -57,27 +63,34 @@ final class ___VARIABLE_productName:identifier___View: UIView {
     // MARK: - UIComponents
     
     func addUIComponents() {
-        addSubview(tableView)
+        addSubview(contentView)
+        contentView.addSubview(tableView)
     }
     
     func layoutUIComponents() {
+        contentView.snp.makeConstraints { make in
+            make.edges.equalTo(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
+        }
+
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
-    
+
+    func setupBindings() {
+        onUpdateUIComponents()
+    }
+
     func onUpdateUIComponents() {
         guard let viewModel = self.viewModel else { return }
     }
     
-    func setupBindings() {
-        onUpdateUIComponents()
-    }
 }
 
 // MARK: - UITableViewDataSource & UITableViewDelegate
 
 extension ___VARIABLE_productName:identifier___View: UITableViewDataSource, UITableViewDelegate {
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return self.viewModel?.numberOfSections() ?? 0
     }
@@ -95,5 +108,9 @@ extension ___VARIABLE_productName:identifier___View: UITableViewDataSource, UITa
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return self.viewModel?.heightForRowAt(indexPath) ?? 0.0
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
