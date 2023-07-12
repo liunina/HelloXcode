@@ -1,11 +1,9 @@
 //___FILEHEADER___
 
 #import "___FILEBASENAME___.h"
-#import "___VARIABLE_productName___ViewModel.h"
 #import <Masonry/Masonry.h>
 
 @interface ___VARIABLE_productName:identifier___View ()
-@property (nonatomic, strong) ___VARIABLE_productName___ViewModel *viewModel;
 @property (nonatomic, strong) UIView *contentView;
 
 @end
@@ -15,15 +13,6 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [self onInitUIComponents];
-    }
-    return self;
-}
-
-- (instancetype)initWithViewModel:(___VARIABLE_productName___ViewModel *)viewModel {
-    self = [super init];
-    if (self) {
-        self.viewModel = viewModel;
         [self onInitUIComponents];
     }
     return self;
@@ -46,12 +35,6 @@
 }
 
 #pragma mark - getter/setter
-- (void)setViewModel:(___VARIABLE_productName___ViewModel *)viewModel {
-    if (_viewModel != viewModel) {
-        _viewModel = viewModel;
-        [self onSetuBinding];
-    }
-}
 
 - (UIView *)contentView {
     if (!_contentView) {

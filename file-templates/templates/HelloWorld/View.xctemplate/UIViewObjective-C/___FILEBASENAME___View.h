@@ -5,13 +5,8 @@ ___IMPORTHEADER_cocoaTouchSubclass___
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class ___VARIABLE_productName___ViewModel;
 @interface ___VARIABLE_productName:identifier___View : ___VARIABLE_cocoaTouchSubclass___
 
-
-/// 通过视图模型构造实例
-/// - Parameter viewModel: 视图模型
-- (instancetype)initWithViewModel:(___VARIABLE_productName___ViewModel *)viewModel;
 @end
 
 NS_ASSUME_NONNULL_END

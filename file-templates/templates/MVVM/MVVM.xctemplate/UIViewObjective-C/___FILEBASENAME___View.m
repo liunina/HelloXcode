@@ -15,7 +15,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        
+        [self onInitUIComponents];
     }
     return self;
 }
@@ -24,11 +24,17 @@
     self = [super init];
     if (self) {
         self.viewModel = viewModel;
+        [self onInitUIComponents];
     }
     return self;
 }
 
 #pragma mark - private
+
+- (void)onInitUIComponents {
+    // TODO: implement
+    self.contentView.backgroundColor = [UIColor systemCyanColor];
+}
 
 - (void)onUpdateUIComponents {
     // TODO: implement
@@ -52,7 +58,7 @@
         UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
         [self addSubview:view];
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.inset(0);
+            make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
         }];
         _contentView = view;
     }

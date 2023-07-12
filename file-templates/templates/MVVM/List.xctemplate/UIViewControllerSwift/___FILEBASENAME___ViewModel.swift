@@ -15,14 +15,16 @@ protocol ___VARIABLE_productName:identifier___ViewModelDatasource {
 }
 
 /// 代理
-protocol ___VARIABLE_productName:identifier___ViewModelDelegate: AnyObject {
-    
+@objc protocol ___VARIABLE_productName:identifier___ViewModelDelegate: AnyObject {
+
+    @objc optional func doSomething()
 }
 
 /// 列表视图模型
 final class ___VARIABLE_productName:identifier___ViewModel {
     
     // MARK: - Inputs
+    
     weak var delegate: ___VARIABLE_productName:identifier___ViewModelDelegate?
     
     // MARK: - Outputs

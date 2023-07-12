@@ -3,9 +3,21 @@
 
 import Foundation
 
+// 数据源
+protocol ___VARIABLE_productName:identifier___ViewModelDatasource: AnyObject {
+    
+}
+
+// 代理
+@objc protocol ___VARIABLE_productName:identifier___ViewModelDelegate: AnyObject {
+    @objc optional func doSomething()
+}
+
 final class ___VARIABLE_productName:identifier___ViewModel {
     
     // MARK: - Inputs
+    
+    weak var delegate: ___VARIABLE_productName:identifier___ViewModelDelegate?
     
     // MARK: - Outputs
 
@@ -14,4 +26,10 @@ final class ___VARIABLE_productName:identifier___ViewModel {
     init() {
 
     }
+}
+
+// MARK: - ___VARIABLE_productName:identifier___ViewModelDatasource
+
+extension ___VARIABLE_productName:identifier___ViewModel: ___VARIABLE_productName:identifier___ViewModelDatasource {
+    
 }

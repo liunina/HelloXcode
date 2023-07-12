@@ -15,7 +15,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-
+        [self onInitUIComponents];
     }
     return self;
 }
@@ -24,11 +24,16 @@
     self = [super init];
     if (self) {
         self.viewModel = viewModel;
+        [self onInitUIComponents];
     }
     return self;
 }
 
 #pragma mark - private
+
+- (void)onInitUIComponents {
+    // TODO: implement
+}
 
 - (void)onUpdateUIComponents {
     // TODO: implement
