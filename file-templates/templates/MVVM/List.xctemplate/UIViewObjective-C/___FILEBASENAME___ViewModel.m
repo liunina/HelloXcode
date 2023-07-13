@@ -3,12 +3,12 @@
 #import "___FILEBASENAME___.h"
 
 @interface ___VARIABLE_productName:identifier___ViewModel ()
-@property (nonatomic, strong) <#type#> *model;
+@property (nonatomic, strong) NSObject *model;
 @end
 
 @implementation ___VARIABLE_productName___ViewModel
 
-- (instancetype)initWithModel:(<#type#>)model {
+- (instancetype)initWithModel:(NSObject *)model {
     self = [super init];
     if (self) {
         self.model = model;
@@ -31,6 +31,7 @@
 }
 
 - (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    id item = [self itemForRowAtIndexPath:indexPath];
     return 44;
 }
 

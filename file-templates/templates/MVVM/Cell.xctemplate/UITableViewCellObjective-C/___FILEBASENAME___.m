@@ -2,6 +2,7 @@
 
 #import "___FILEBASENAME___.h"
 #import "___VARIABLE_productName___Model.h"
+#import <Masonry/Masonry.h>
 
 @interface ___FILEBASENAMEASIDENTIFIER___ ()
 /// 容器视图
@@ -9,12 +10,6 @@
 @end
 
 @implementation ___FILEBASENAMEASIDENTIFIER___
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
 
 #pragma mark - private
 
@@ -39,6 +34,13 @@
     if (!_containerView) {
         UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
         [self.contentView addSubview:view];
+        [view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.contentView.mas_top).offset(0);
+            make.left.equalTo(self.contentView.mas_left).offset(0);
+            make.right.equalTo(self.contentView.mas_right).offset(0);
+            make.bottom.equalTo(self.contentView.mas_bottom).offset(0);
+        }];
+        _containe
         _containerView = view;
     }
     return _containerView;

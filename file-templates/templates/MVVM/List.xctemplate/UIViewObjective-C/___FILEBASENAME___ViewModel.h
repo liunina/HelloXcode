@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 //@class <#type#>;
-@interface ___VARIABLE_productName:identifier___ViewModel : NSObject
+@interface ___VARIABLE_productName:identifier___ViewModel : NSObject<___VARIABLE_productName:identifier___ViewModelDatasource>
 
 /// 通过模型视图模型构建
 /// - Parameter model: <#model description#>

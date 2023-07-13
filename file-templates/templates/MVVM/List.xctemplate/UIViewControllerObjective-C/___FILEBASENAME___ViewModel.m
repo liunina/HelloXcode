@@ -31,6 +31,7 @@
 }
 
 - (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    id item = [self itemForRowAtIndexPath:indexPath];
     return 44;
 }
 

@@ -104,7 +104,6 @@
         view.showsVerticalScrollIndicator   = NO;
         view.showsHorizontalScrollIndicator = NO;
         view.separatorStyle = UITableViewCellSeparatorStyleNone;
-        view.rowHeight = 44;
         [view registerClass:[UITableViewCell class] forCellReuseIdentifier:@""];
         
         if(@available(iOS 11.0, *)) {
