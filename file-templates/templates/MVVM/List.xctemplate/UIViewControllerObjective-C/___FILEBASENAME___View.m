@@ -88,7 +88,7 @@
         UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
         [self addSubview:view];
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.inset(0);
+            make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
         }];
         _contentView = view;
     }
@@ -116,7 +116,10 @@
         }
         [self.contentView addSubview:view];
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.inset(0);
+            make.top.equalTo(self.contentView.mas_top).offset(0);
+            make.left.equalTo(self.contentView.mas_left).offset(0);
+            make.right.equalTo(self.contentView.mas_right).offset(0);
+            make.bottom.equalTo(self.contentView.mas_bottom).offset(0);
         }];
         _tableView = view;
     }

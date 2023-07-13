@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 //@class <#type#>;
 @interface ___VARIABLE_productName:identifier___ViewModel : NSObject<___VARIABLE_productName:identifier___ViewModelDatasource>
-
+@property (nonatomic, strong, readonly) NSObject *model;
 /// 通过模型视图模型构建
 /// - Parameter model: <#model description#>
 - (instancetype)initWithModel:(NSObject *)model;

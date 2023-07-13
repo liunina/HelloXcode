@@ -27,6 +27,9 @@
 }
 
 - (id)itemForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    if (indexPath.row < self.cellModels.count) {
+//        return self.cellModels[indexPath.row];
+//    }
     return nil;
 }
 
@@ -36,7 +39,7 @@
 }
 
 - (void)onSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    id item = [self itemForRowAtIndexPath:indexPath];
 }
 
 @end

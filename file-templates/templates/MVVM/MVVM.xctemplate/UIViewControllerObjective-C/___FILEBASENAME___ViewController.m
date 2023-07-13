@@ -31,7 +31,10 @@
         ___VARIABLE_productName___View *view = [[___VARIABLE_productName___View alloc] initWithFrame:CGRectZero];
         [self.view addSubview:view];
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.inset(0);
+            make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop).offset(0);
+            make.left.equalTo(self.view.mas_left);
+            make.right.equalTo(self.view.mas_right);
+            make.bottom.equalTo(self.view.mas_bottom);
         }];
         _productView = view;
     }
