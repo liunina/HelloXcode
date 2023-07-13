@@ -3,30 +3,37 @@
 import UIKit
 
 // 列表视图数据源
-protocol ___FILEBASENAMEASIDENTIFIER___ModelDatasource: NSObjectProtocol {
+protocol ___FILEBASENAMEASIDENTIFIER___Datasource: NSObjectProtocol {
     
     /// 行高
     var rowHeight: CGFloat { get }
 }
 
 // 列表代理
-@objc protocol ___FILEBASENAMEASIDENTIFIER___ModelDelegate: NSObjectProtocol {
+@objc protocol ___FILEBASENAMEASIDENTIFIER___Delegate: NSObjectProtocol {
     
     /// 列表视图点击选中事件
     /// - Parameters:
     ///   - cell: 列表视图
     ///   - cellModel: 列表视图模型
-    @objc optional func cell(_ cell: ___FILEBASENAMEASIDENTIFIER___, onSelectWith cellModel: ___FILEBASENAMEASIDENTIFIER___Model)
+    @objc optional func cell(_ cell: ___VARIABLE_productName___, onSelectWith cellModel: ___FILEBASENAMEASIDENTIFIER___)
 }
 
-class ___FILEBASENAMEASIDENTIFIER___Model: NSObject {
+/// 视图模型
+class ___FILEBASENAMEASIDENTIFIER___: NSObject {
     
-    weak var delegate: ___FILEBASENAMEASIDENTIFIER___ModelDelegate?
+    weak var delegate: ___FILEBASENAMEASIDENTIFIER___Delegate?
+
+    public var model: AnyObject
+    
+    init(model: AnyObject) {
+        self.model = model
+    }
 }
 
-// MARK: - ___FILEBASENAMEASIDENTIFIER___ModelDatasource
+// MARK: - ___FILEBASENAMEASIDENTIFIER___Datasource
 
-extension ___FILEBASENAMEASIDENTIFIER___Model: ___FILEBASENAMEASIDENTIFIER___ModelDatasource {
+extension ___FILEBASENAMEASIDENTIFIER___: ___FILEBASENAMEASIDENTIFIER___Datasource {
     
     var rowHeight: CGFloat {
         return 44.0

@@ -33,7 +33,7 @@
 
 - (void)onInitUIComponents {
     // TODO: implement
-    self.contentView.backgroundColor = [UIColor systemCyanColor];
+    self.contentView.backgroundColor = [UIColor blue];
 }
 
 - (void)onUpdateUIComponents {

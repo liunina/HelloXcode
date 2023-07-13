@@ -34,7 +34,7 @@
             make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop).offset(0);
             make.left.equalTo(self.view.mas_left);
             make.right.equalTo(self.view.mas_right);
-            make.bottom.equalTo(self.view.mas_bottom);
+            make.bottom.equalTo(self.contentView.mas_bottom).offset(0);
         }];
         _productView = view;
     }

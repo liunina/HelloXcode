@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 // @class <#type#>;
 @interface ___VARIABLE_productName:identifier___Model : NSObject<___VARIABLE_productName:identifier___ModelDatasource>
 @property (nullable, nonatomic, weak) IBOutlet id<___VARIABLE_productName:identifier___ModelDelegate> delegate;
+@property (nonatomic, strong, readonly) NSObject *model;
 
 /// 通过模型视图模型构建
 /// - Parameter model: <#model description#>
