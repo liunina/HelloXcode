@@ -16,6 +16,6 @@
     return self;
 }
 
-#pragma mark - MCBubbyViewModelDatasource
+#pragma mark - ___VARIABLE_productName___ViewModelDatasource
 
 @end

@@ -10,6 +10,8 @@ protocol ___VARIABLE_productName:identifier___ViewModelDatasource: AnyObject {
 
 // 代理
 @objc protocol ___VARIABLE_productName:identifier___ViewModelDelegate: AnyObject {
+    
+    // 示例代码
     @objc optional func doSomething()
 }
 

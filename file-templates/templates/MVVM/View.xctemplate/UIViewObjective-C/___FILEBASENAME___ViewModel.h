@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 // @class <#type#>;
-@interface ___VARIABLE_productName:identifier___ViewModel : NSObject
+@interface ___VARIABLE_productName:identifier___ViewModel : NSObject<___VARIABLE_productName___ViewModelDatasource>
 @property (nullable, nonatomic, weak) IBOutlet id<___VARIABLE_productName___ViewModelDelegate> delegate;
 
 /// 通过模型视图模型构建

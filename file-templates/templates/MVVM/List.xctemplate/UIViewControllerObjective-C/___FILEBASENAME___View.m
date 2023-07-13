@@ -62,7 +62,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     id item = [self.viewModel itemForRowAtIndexPath:indexPath];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
     return cell;
 }
 
@@ -104,7 +104,7 @@
         view.showsVerticalScrollIndicator   = NO;
         view.showsHorizontalScrollIndicator = NO;
         view.separatorStyle = UITableViewCellSeparatorStyleNone;
-        [view registerClass:[UITableViewCell class] forCellReuseIdentifier:@""];
+        [view registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
         
         if(@available(iOS 11.0, *)) {
             view.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
