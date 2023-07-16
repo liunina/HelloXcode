@@ -6,7 +6,7 @@ ___IMPORTHEADER_cocoaTouchSubclass___
 NS_ASSUME_NONNULL_BEGIN
 
 @class ___VARIABLE_productName___ViewModel;
-@interface ___VARIABLE_productName:identifier___View : ___VARIABLE_cocoaTouchSubclass___
+@interface ___VARIABLE_productName:identifier___View : UIView
 
 
 /// 通过视图模型构造实例

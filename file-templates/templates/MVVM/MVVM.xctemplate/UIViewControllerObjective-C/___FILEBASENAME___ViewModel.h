@@ -13,8 +13,21 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol ___VARIABLE_productName___ViewModelDelegate <NSObject> 
 @end
 
+/// UI 交互的协议,获取所在控制器,进行页面调整或者push
+@protocol ___VARIABLE_productName___ViewModelInteractionProvider <NSObject>
+
+@optional
+
+/// 导航或者交互使用的控制器
+- (nullable UIViewController *)interactionViewController;
+
+@end
+
 // @class <#type#>;
 @interface ___VARIABLE_productName:identifier___ViewModel : NSObject<___VARIABLE_productName___ViewModelDatasource>
+/// UI交互架构提供者
+@property (nullable, nonatomic, strong) id<___VARIABLE_productName___ViewModelInteractionProvider> interactionProvider;
+/// 事件代理回传
 @property (nullable, nonatomic, weak) IBOutlet id<___VARIABLE_productName___ViewModelDelegate> delegate;
 @property (nonatomic, strong, readonly) NSObject *model;
 

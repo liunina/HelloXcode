@@ -5,9 +5,9 @@
 #import "___VARIABLE_productName___View.h"
 #import <Masonry/Masonry.h>
 
-@interface ___VARIABLE_productName___ViewController ()
+@interface ___VARIABLE_productName___ViewController ()<___VARIABLE_productName___ViewModelInteractionProvider>
 @property (nonatomic, strong) ___VARIABLE_productName___ViewModel *viewModel;
-@property (nonatomic, strong) ___VARIABLE_productName___View *productView;
+@property (nonatomic, strong) ___VARIABLE_productName___View *mainView;
 @end
 
 @implementation ___VARIABLE_productName___ViewController
@@ -25,10 +25,16 @@
 
 }
 
+#pragma mark - ___VARIABLE_productName___ViewModelInteractionProvider
+
+- (UIViewController *)interactionViewController {
+    return self;
+}
+
 #pragma mark - getter
-- (___VARIABLE_productName___View *)productView {
-    if (!_productView) {
-        ___VARIABLE_productName___View *view = [[___VARIABLE_productName___View alloc] initWithFrame:CGRectZero];
+- (___VARIABLE_productName___View *)mainView {
+    if (!_mainView) {
+        ___VARIABLE_productName___View *view = [[___VARIABLE_productName___View alloc] initWithViewModel:self.viewModel];
         [self.view addSubview:view];
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop).offset(0);
@@ -36,9 +42,9 @@
             make.right.equalTo(self.view.mas_right);
             make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom).offset(0);
         }];
-        _productView = view;
+        _mainView = view;
     }
-    return _productView;
+    return _mainView;
 }
 
 @end
