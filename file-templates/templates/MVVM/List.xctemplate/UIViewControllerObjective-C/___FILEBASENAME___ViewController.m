@@ -16,6 +16,7 @@
     self = [super init];
     if (self) {
         self.viewModel = viewModel;
+        self.viewModel.interactionProvider = self;
     }
     return self;
 }
