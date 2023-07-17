@@ -20,6 +20,7 @@ final class ___VARIABLE_productName:identifier___ViewController: UIViewControlle
     init(viewModel: ___VARIABLE_productName:identifier___ViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        self.viewModel.interactionProvider = self
     }
 
     @available(*, unavailable)
@@ -48,5 +49,14 @@ final class ___VARIABLE_productName:identifier___ViewController: UIViewControlle
     
     func setupBindings() {
          
+    }
+}
+
+
+// MARK: - ___VARIABLE_productName___ViewModelInteractionProvider
+
+extension ___VARIABLE_productName___ViewController: ___VARIABLE_productName___ViewModelInteractionProvider {
+    func interactionViewController() -> UIViewController {
+        return self
     }
 }

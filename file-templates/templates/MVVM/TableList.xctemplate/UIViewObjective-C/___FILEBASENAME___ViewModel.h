@@ -5,15 +5,15 @@ ___IMPORTHEADER_cocoaTouchSubclass___
 
 NS_ASSUME_NONNULL_BEGIN
 
-
 /// 列表数据源
+@class ___VARIABLE_productName___CellModel;
 @protocol ___VARIABLE_productName:identifier___ViewModelDatasource <NSObject>
  
 - (NSInteger)numberOfSections;
  
 - (NSInteger)numberOfRowsInSection:(NSInteger)section;
 
-- (id)itemForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (___VARIABLE_productName___CellModel *)itemForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 - (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 
@@ -21,9 +21,22 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+/// UI 交互的协议,获取所在控制器,进行页面调整或者push
+@protocol ___VARIABLE_productName___ViewModelInteractionProvider <NSObject>
+
+@optional
+
+/// 导航或者交互使用的控制器
+- (nullable UIViewController *)interactionViewController;
+
+@end
+
 //@class <#type#>;
 @interface ___VARIABLE_productName:identifier___ViewModel : NSObject<___VARIABLE_productName:identifier___ViewModelDatasource>
 @property (nonatomic, strong, readonly) NSObject *model;
+/// UI交互架构提供者
+@property (nullable, nonatomic, strong) id<___VARIABLE_productName___ViewModelInteractionProvider> interactionProvider;
+
 /// 通过模型视图模型构建
 /// - Parameter model: <#model description#>
 - (instancetype)initWithModel:(NSObject *)model;

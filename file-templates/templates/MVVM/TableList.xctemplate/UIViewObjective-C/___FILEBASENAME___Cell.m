@@ -1,15 +1,15 @@
 //___FILEHEADER___
 
 #import "___FILEBASENAME___.h"
-#import "___VARIABLE_productName___Model.h"
+#import "___VARIABLE_productName___CellModel.h"
 #import <Masonry/Masonry.h>
 
-@interface ___FILEBASENAMEASIDENTIFIER___ ()
+@interface ___VARIABLE_productName___Cell ()
 /// 容器视图
 @property (nonatomic, strong) UIView *containerView;
 @end
 
-@implementation ___FILEBASENAMEASIDENTIFIER___
+@implementation ___VARIABLE_productName___Cell
 
 #pragma mark - private
 
@@ -23,7 +23,7 @@
 
 #pragma mark - setter
 
-- (void)setCellModel:(___VARIABLE_productName___Model *)cellModel {
+- (void)setCellModel:(___VARIABLE_productName___CellModel *)cellModel {
     if (_cellModel != cellModel) {
         _cellModel = cellModel;
         [self onSetupBinding];

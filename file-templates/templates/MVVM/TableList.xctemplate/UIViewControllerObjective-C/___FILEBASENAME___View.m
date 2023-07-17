@@ -2,6 +2,8 @@
 
 #import "___FILEBASENAME___.h"
 #import "___VARIABLE_productName___ViewModel.h"
+#import "___VARIABLE_productName___Cell.h"
+#import "___VARIABLE_productName___CellModel.h"
 #import <Masonry/Masonry.h>
 
 @interface ___VARIABLE_productName:identifier___View ()<UITableViewDataSource, UITableViewDelegate>
@@ -61,8 +63,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    id item = [self.viewModel itemForRowAtIndexPath:indexPath];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"" forIndexPath:indexPath];
+    ___VARIABLE_productName___CellModel *cellModel = [self.viewModel itemForRowAtIndexPath:indexPath];
+    ___VARIABLE_productName___Cell *cell = [tableView dequeueReusableCellWithIdentifier:@"___VARIABLE_productName___Cell" forIndexPath:indexPath];
+    cell.cellModel = cellModel;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
@@ -76,7 +80,6 @@
 }
 
 #pragma mark - getter/setter
-
 - (void)setViewModel:(___VARIABLE_productName___ViewModel *)viewModel {
     if (_viewModel != viewModel) {
         _viewModel = viewModel;
@@ -96,7 +99,6 @@
     return _contentView;
 }
 
-
 - (UITableView *)tableView {
     if (!_tableView) {
         UITableView *view = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
@@ -106,7 +108,7 @@
         view.showsVerticalScrollIndicator   = NO;
         view.showsHorizontalScrollIndicator = NO;
         view.separatorStyle = UITableViewCellSeparatorStyleNone;
-        [view registerClass:[UITableViewCell class] forCellReuseIdentifier:@""];
+        [view registerClass:[___VARIABLE_productName___Cell class] forCellReuseIdentifier:@"___VARIABLE_productName___Cell"];
         
         if(@available(iOS 11.0, *)) {
             view.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;

@@ -23,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [self.mainView reloadData];
 }
 
 #pragma mark - ___VARIABLE_productName___ViewModelInteractionProvider

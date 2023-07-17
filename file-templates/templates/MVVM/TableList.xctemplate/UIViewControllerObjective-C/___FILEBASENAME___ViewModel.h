@@ -6,13 +6,14 @@ ___IMPORTHEADER_cocoaTouchSubclass___
 NS_ASSUME_NONNULL_BEGIN
 
 /// 列表数据源
+@class ___VARIABLE_productName___CellModel;
 @protocol ___VARIABLE_productName:identifier___ViewModelDatasource <NSObject>
  
 - (NSInteger)numberOfSections;
  
 - (NSInteger)numberOfRowsInSection:(NSInteger)section;
 
-- (id)itemForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (___VARIABLE_productName___CellModel *)itemForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 - (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 
