@@ -10,7 +10,7 @@ protocol ___VARIABLE_productName:identifier___ViewModelDatasource {
     
     func numberOfRowsInSection(_ section: Int) -> Int
     
-    func itemForRowAt(_ indexPath: IndexPath) -> Any?
+    func itemForRowAt(_ indexPath: IndexPath) -> ___VARIABLE_productName___CellModel?
     
     func heightForRowAt(_ indexPath: IndexPath) -> CGFloat
 }

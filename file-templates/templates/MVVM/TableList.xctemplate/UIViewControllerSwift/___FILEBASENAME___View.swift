@@ -25,7 +25,7 @@ final class ___VARIABLE_productName:identifier___View: UIView {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = .white
-        tableView.separatorStyle = .none
+        tableView.separatorStyle = .singleLine
         tableView.rowHeight = 48
         if #available(iOS 15.0, *) {
             tableView.sectionHeaderTopPadding = 0
@@ -36,6 +36,7 @@ final class ___VARIABLE_productName:identifier___View: UIView {
         tableView.contentInset = UIEdgeInsets(top:0, left:0, bottom: 0, right:0)
         tableView.separatorColor = UIColor(red: 219/255.0, green: 219/255.0, blue: 219/255.0, alpha: 1)
         tableView.register(___VARIABLE_productName___Cell.self, forCellReuseIdentifier:"___VARIABLE_productName___Cell")
+//        tableView.registerClass(___VARIABLE_productName___Cell.self)
         return tableView
     }()
 
@@ -54,10 +55,11 @@ final class ___VARIABLE_productName:identifier___View: UIView {
     // MARK: - Public
     
     func reloadData() {
-        DispatchQueue.main.dispatchMainIfNeeded { [weak self] in
-            guard let self = self else { return }
-            self.tableView.reloadData()
-        }
+         self.tableView.reloadData()
+//        DispatchQueue.main.dispatchMainIfNeeded { [weak self] in
+//            guard let self = self else { return }
+//            
+//        }
     }
     
     // MARK: - UIComponents
@@ -101,6 +103,7 @@ extension ___VARIABLE_productName:identifier___View: UITableViewDataSource, UITa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "___VARIABLE_productName___Cell", for: indexPath) as! ___VARIABLE_productName___Cell
+//        let cell = tableView.dequeueReusableCellClass(for: indexPath) as ___VARIABLE_productName___Cell
         cell.selectionStyle = .none
         guard let cellModel = self.viewModel?.itemForRowAt(indexPath) else {
             return cell

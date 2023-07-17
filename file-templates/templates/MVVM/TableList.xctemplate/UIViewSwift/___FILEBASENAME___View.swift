@@ -19,13 +19,13 @@ final class ___VARIABLE_productName:identifier___View: UIView {
         view.backgroundColor = .clear
         return view
     }()
-
+    
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = .white
-        tableView.separatorStyle = .none
+        tableView.separatorStyle = .singleLine
         tableView.rowHeight = 48
         if #available(iOS 15.0, *) {
             tableView.sectionHeaderTopPadding = 0
@@ -35,7 +35,8 @@ final class ___VARIABLE_productName:identifier___View: UIView {
         tableView.separatorInset = UIEdgeInsets(top:0, left:0, bottom: 0, right: 0)
         tableView.contentInset = UIEdgeInsets(top:0, left:0, bottom: 0, right:0)
         tableView.separatorColor = UIColor(red: 219/255.0, green: 219/255.0, blue: 219/255.0, alpha: 1)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier:"UITableViewCell")
+        tableView.register(___VARIABLE_productName___Cell.self, forCellReuseIdentifier:"___VARIABLE_productName___Cell")
+//        tableView.registerClass(___VARIABLE_productName___Cell.self)
         return tableView
     }()
 
@@ -54,14 +55,15 @@ final class ___VARIABLE_productName:identifier___View: UIView {
     // MARK: - Public
     
     func reloadData() {
-        DispatchQueue.main.dispatchMainIfNeeded { [weak self] in
-            guard let self = self else { return }
-            self.tableView.reloadData()
-        }
+         self.tableView.reloadData()
+//        DispatchQueue.main.dispatchMainIfNeeded { [weak self] in
+//            guard let self = self else { return }
+//            
+//        }
     }
     
     // MARK: - UIComponents
-    
+
     func addUIComponents() {
         addSubview(contentView)
         contentView.addSubview(tableView)
@@ -76,7 +78,7 @@ final class ___VARIABLE_productName:identifier___View: UIView {
             make.edges.equalToSuperview()
         }
     }
-
+ 
     func setupBindings() {
         onUpdateUIComponents()
     }
@@ -84,7 +86,7 @@ final class ___VARIABLE_productName:identifier___View: UIView {
     func onUpdateUIComponents() {
         guard let viewModel = self.viewModel else { return }
     }
-    
+
 }
 
 // MARK: - UITableViewDataSource & UITableViewDelegate
@@ -100,17 +102,24 @@ extension ___VARIABLE_productName:identifier___View: UITableViewDataSource, UITa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let item = self.viewModel?.itemForRowAt(indexPath) else {
-            return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "___VARIABLE_productName___Cell", for: indexPath) as! ___VARIABLE_productName___Cell
+//        let cell = tableView.dequeueReusableCellClass(for: indexPath) as ___VARIABLE_productName___Cell
+        cell.selectionStyle = .none
+        guard let cellModel = self.viewModel?.itemForRowAt(indexPath) else {
+            return cell
         }
         
+        cell.datasource = cellModel
+        cell.delegate = cellModel.delegate
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return self.viewModel?.heightForRowAt(indexPath) ?? 0.0
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+
 }

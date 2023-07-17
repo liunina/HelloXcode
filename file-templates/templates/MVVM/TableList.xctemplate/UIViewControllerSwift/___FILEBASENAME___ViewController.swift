@@ -30,6 +30,7 @@ final class ___VARIABLE_productName:identifier___ViewController: UIViewControlle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.mainView.reloadData()
     }
 
     // MARK: override
