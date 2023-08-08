@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ___VARIABLE_productName:identifier___ViewModel : NSObject<___VARIABLE_productName:identifier___ViewModelDatasource>
 @property (nonatomic, strong, readonly) NSObject *model;
 /// UI交互架构提供者
-@property (nullable, nonatomic, strong) id<___VARIABLE_productName___ViewModelInteractionProvider> interactionProvider;
+@property (nullable, nonatomic, weak) id<___VARIABLE_productName___ViewModelInteractionProvider> interactionProvider;
 
 /// 通过模型视图模型构建
 /// - Parameter model: <#model description#>

@@ -3,6 +3,7 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 /// 数据源
 protocol ___VARIABLE_productName:identifier___ViewModelDatasource {
@@ -39,7 +40,9 @@ final class ___VARIABLE_productName:identifier___ViewModel {
     
     /// cellModel构成的数组
     private var cellModels: [___VARIABLE_productName___CellModel] = []
-    
+    /// 页面刷新事件
+    let reloadSubject: PublishSubject<Bool> = .init()
+
     // MARK: - Outputs
 
     // MARK: - Init
@@ -50,12 +53,22 @@ final class ___VARIABLE_productName:identifier___ViewModel {
     
     /// 初始化
     private func onInit() {
-        var cellModels = [DTSkuListCellModel]()
+        var cellModels = [___VARIABLE_productName___CellModel]()
         for _ in 0...20 {
-            let cellModel = DTSkuListCellModel(model: self)
+            let cellModel = ___VARIABLE_productName___CellModel(model: self)
             cellModels.append(cellModel)
         }
         self.cellModels.append(contentsOf: cellModels)
+    }
+    
+    private func reload() {
+        reloadSubject.onNext(true)
+    }
+
+    // MARK: - Public
+    
+    func onRefresh() {    
+        reload()
     }
 
 }
