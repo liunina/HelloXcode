@@ -23,12 +23,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-// @class <#type#>;
+//@class <#type#>;
 @interface ___VARIABLE_productName___CellModel : NSObject<___VARIABLE_productName___CellModelDatasource>
 @property (nullable, nonatomic, weak) IBOutlet id<___VARIABLE_productName___CellModelDelegate> delegate;
 @property (nonatomic, strong, readonly) NSObject *model;
 
-/// 通过模型视图模型构建
+/// 通过模型构建视图模型
 /// - Parameter model: <#model description#>
 - (instancetype)initWithModel:(NSObject *)model;
 

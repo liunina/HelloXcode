@@ -4,7 +4,7 @@ ___IMPORTHEADER_cocoaTouchSubclass___
 
 NS_ASSUME_NONNULL_BEGIN
 
-// @class <#type#>;
+//@class <#type#>;
 @interface ___VARIABLE_productName:identifier___Model : NSObject
 
 /// 通过模型视图模型构建

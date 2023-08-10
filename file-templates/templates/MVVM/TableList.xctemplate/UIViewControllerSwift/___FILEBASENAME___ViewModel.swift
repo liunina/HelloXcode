@@ -64,6 +64,8 @@ final class ___VARIABLE_productName:identifier___ViewModel {
     private func reload() {
         reloadSubject.onNext(true)
     }
+   
+    // MARK: - Public
 
     func onRefresh() {    
         reload()

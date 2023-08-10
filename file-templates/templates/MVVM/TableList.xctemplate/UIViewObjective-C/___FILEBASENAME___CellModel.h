@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-// @class <#type#>;
+//@class <#type#>;
 @interface ___VARIABLE_productName___CellModel : NSObject<___VARIABLE_productName___CellModelDatasource>
 @property (nullable, nonatomic, weak) IBOutlet id<___VARIABLE_productName___CellModelDelegate> delegate;
 @property (nonatomic, strong, readonly) NSObject *model;

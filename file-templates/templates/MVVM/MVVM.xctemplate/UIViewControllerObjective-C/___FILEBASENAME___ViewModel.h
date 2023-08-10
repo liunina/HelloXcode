@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-// @class <#type#>;
+//@class <#type#>;
 @interface ___VARIABLE_productName:identifier___ViewModel : NSObject<___VARIABLE_productName___ViewModelDatasource>
 /// UI交互架构提供者
 @property (nullable, nonatomic, strong) id<___VARIABLE_productName___ViewModelInteractionProvider> interactionProvider;

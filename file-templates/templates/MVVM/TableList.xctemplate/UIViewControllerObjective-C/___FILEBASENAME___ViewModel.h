@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// UI交互架构提供者
 @property (nullable, nonatomic, weak) id<___VARIABLE_productName___ViewModelInteractionProvider> interactionProvider;
 
-/// 通过模型视图模型构建
+/// 通过模型构建视图模型
 /// - Parameter model: <#model description#>
 - (instancetype)initWithModel:(NSObject *)model;
 @end

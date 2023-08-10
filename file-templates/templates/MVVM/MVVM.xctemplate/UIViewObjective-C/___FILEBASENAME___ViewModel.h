@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol ___VARIABLE_productName___ViewModelDelegate <NSObject> 
 @end
 
-// @class <#type#>;
+//@class <#type#>;
 @interface ___VARIABLE_productName:identifier___ViewModel : NSObject<___VARIABLE_productName___ViewModelDatasource>
 @property (nullable, nonatomic, weak) IBOutlet id<___VARIABLE_productName___ViewModelDelegate> delegate;
 @property (nonatomic, strong, readonly) NSObject *model;
