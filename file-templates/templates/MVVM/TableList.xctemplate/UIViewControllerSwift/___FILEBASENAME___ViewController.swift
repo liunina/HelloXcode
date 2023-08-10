@@ -27,7 +27,13 @@ final class ___VARIABLE_productName:identifier___ViewController: UIViewControlle
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
+    static func HelloWorld() -> ___VARIABLE_productName:identifier___ViewController {
+        let viewModel = ___VARIABLE_productName:identifier___ViewModel()
+        let vc = ___VARIABLE_productName:identifier___ViewController(viewModel: viewModel)
+        return vc
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mainView.reloadData()
