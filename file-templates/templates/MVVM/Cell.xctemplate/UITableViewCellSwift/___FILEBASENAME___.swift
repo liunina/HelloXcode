@@ -1,16 +1,17 @@
 //___FILEHEADER___
 
 import UIKit
+import SnapKit
 
 class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_cocoaTouchSubclass___ {
+
+    // MARK: - Porperties
     
-    public var datasource: ___FILEBASENAMEASIDENTIFIER___ModelDatasource? {
+    public var provider: ___FILEBASENAMEASIDENTIFIER___ModelProvider? {
         didSet {
             setupBindings()
         }
     }
-    
-    public var delegate: ___FILEBASENAMEASIDENTIFIER___ModelDelegate?
     
     /// 容器视图
     private lazy var containerView: UIView = {
@@ -36,8 +37,8 @@ class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_cocoaTouchSubclass___ {
     }
     
     public func onUpdateUIComponents() {
-        guard let datasource = self.datasource else { return }
-        // Configure components for datasource
+        guard let provider = self.provider else { return }
+        // Configure components for provider
     }
 
 }

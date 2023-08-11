@@ -2,17 +2,15 @@
 
 import UIKit
 
-class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_cocoaTouchSubclass___ {
+class ___FILEBASENAMEASIDENTIFIER___: UITableViewCell {
     
     // MARK: - Porperties
 
-    public var datasource: ___FILEBASENAMEASIDENTIFIER___ModelDatasource? {
+    public var provider: ___FILEBASENAMEASIDENTIFIER___ModelProvider? {
         didSet {
             setupBindings()
         }
     }
-    
-    public var delegate: ___FILEBASENAMEASIDENTIFIER___ModelDelegate?
     
     /// 容器视图
     @IBOutlet var containerView: UIView!
@@ -43,7 +41,7 @@ class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_cocoaTouchSubclass___ {
     }
     
     public func onUpdateUIComponents() {
-        guard let datasource = self.datasource else { return }
-        // Configure components for datasource
+        guard let provider = self.provider else { return }
+        // Configure components for provider
     }
 }
