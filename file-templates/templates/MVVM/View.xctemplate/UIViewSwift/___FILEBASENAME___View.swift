@@ -8,7 +8,7 @@ final class ___VARIABLE_productName:identifier___View: UIView {
     
     // MARK: - Private properties
     
-    private var viewModel: ___VARIABLE_productName:identifier___ViewModel? {
+    private var viewModel: ___VARIABLE_productName:identifier___ViewModel {
         didSet {
             setupBindings()
         }
@@ -53,7 +53,7 @@ final class ___VARIABLE_productName:identifier___View: UIView {
 
     // UI更新
     private func onUpdateUIComponents() {
-        guard let viewModel = self.viewModel else { return }
+
     }
     
 }

@@ -49,7 +49,7 @@ final class ___VARIABLE_productName:identifier___View: UIView {
     }
 
     func onUpdateUIComponents() {
-        guard let viewModel = self.viewModel else { return }
+    
     }
     
 }

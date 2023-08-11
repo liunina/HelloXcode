@@ -1,16 +1,15 @@
 //___FILEHEADER___
 
 import UIKit
+import SnapKit
 
 class ___VARIABLE_productName___Cell: UITableViewCell {
     
-    public var datasource: ___VARIABLE_productName___CellModelDatasource? {
+    public var provider: ___VARIABLE_productName___CellModelProvider? {
         didSet {
             setupBindings()
         }
     }
-    
-    public var delegate: ___VARIABLE_productName___CellModelDelegate?
     
     /// 容器视图
     private lazy var containerView: UIView = {
@@ -36,8 +35,8 @@ class ___VARIABLE_productName___Cell: UITableViewCell {
     }
     
     public func onUpdateUIComponents() {
-        guard let datasource = self.datasource else { return }
-        // Configure components for datasource
+        guard let provider = self.provider else { return }
+        // Configure components for provider
     }
 
 }

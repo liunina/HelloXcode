@@ -8,7 +8,7 @@ final class ___VARIABLE_productName:identifier___View: UIView {
     
     // MARK: - Private properties
     
-    private var viewModel: ___VARIABLE_productName:identifier___ViewModel? {
+    private var viewModel: ___VARIABLE_productName:identifier___ViewModel {
         didSet {
             setupBindings()
         }
@@ -84,9 +84,8 @@ final class ___VARIABLE_productName:identifier___View: UIView {
     }
 
     func onUpdateUIComponents() {
-        guard let viewModel = self.viewModel else { return }
+    
     }
-
 }
 
 // MARK: - UITableViewDataSource & UITableViewDelegate
@@ -94,28 +93,27 @@ final class ___VARIABLE_productName:identifier___View: UIView {
 extension ___VARIABLE_productName:identifier___View: UITableViewDataSource, UITableViewDelegate {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.viewModel?.numberOfSections() ?? 0
+        return self.viewModel.numberOfSections()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel?.numberOfRowsInSection(section) ?? 0
+        return self.viewModel.numberOfRowsInSection(section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "___VARIABLE_productName___Cell", for: indexPath) as! ___VARIABLE_productName___Cell
 //        let cell = tableView.dequeueReusableCellClass(for: indexPath) as ___VARIABLE_productName___Cell
         cell.selectionStyle = .none
-        guard let cellModel = self.viewModel?.itemForRowAt(indexPath) else {
+        guard let cellModel = self.viewModel.itemForRowAt(indexPath) else {
             return cell
         }
         
-        cell.datasource = cellModel
-        cell.delegate = cellModel.delegate
+        cell.provider = cellModel
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.viewModel?.heightForRowAt(indexPath) ?? 0.0
+        return self.viewModel.heightForRowAt(indexPath)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
