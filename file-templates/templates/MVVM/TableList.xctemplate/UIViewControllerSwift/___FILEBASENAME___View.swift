@@ -94,18 +94,18 @@ final class ___VARIABLE_productName:identifier___View: UIView {
 extension ___VARIABLE_productName:identifier___View: UITableViewDataSource, UITableViewDelegate {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.viewModel.numberOfSections()
+        return viewModel.numberOfSections()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel.numberOfRowsInSection(section)
+        return viewModel.numberOfRowsInSection(section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "___VARIABLE_productName___Cell", for: indexPath) as! ___VARIABLE_productName___Cell
 //        let cell = tableView.dequeueReusableCellClass(for: indexPath) as ___VARIABLE_productName___Cell
         cell.selectionStyle = .none
-        guard let cellModel = self.viewModel.itemForRowAt(indexPath) else {
+        guard let cellModel = viewModel.itemForRowAt(indexPath) else {
             return cell
         }
         
@@ -114,11 +114,12 @@ extension ___VARIABLE_productName:identifier___View: UITableViewDataSource, UITa
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.viewModel.heightForRowAt(indexPath)
+        return viewModel.heightForRowAt(indexPath)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        viewModel.onDidSelectRowAt(indexPath)
     }
 
 }

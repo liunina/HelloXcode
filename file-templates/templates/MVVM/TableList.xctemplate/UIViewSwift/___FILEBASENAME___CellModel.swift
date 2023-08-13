@@ -2,20 +2,9 @@
 
 import UIKit
 
-// 视图代理
-@objc protocol ___VARIABLE_productName___CellDelegate: AnyObject {
-
-        /// 示例代码
-    /// - Parameter cell: 视图
-    @objc optional func onExampleAction(_ cell: ___VARIABLE_productName___Cell)
-}
-
 // 列表视图数据源
 @objc protocol ___VARIABLE_productName___CellModelProvider: AnyObject {
     
-    /// 页面内部的交互事件代理
-    var providerDelegate: ___VARIABLE_productName___CellDelegate? { get }
-
     /// 行高
     var rowHeight: CGFloat { get }
 }
@@ -36,7 +25,7 @@ class ___VARIABLE_productName___CellModel: NSObject {
     weak var delegate: ___VARIABLE_productName___CellModelDelegate?
     
     /// 模型
-    private var model: AnyObject
+    var model: AnyObject
        
     // MARK: - Init
     
@@ -50,19 +39,7 @@ class ___VARIABLE_productName___CellModel: NSObject {
 
 extension ___VARIABLE_productName___CellModel: ___VARIABLE_productName___CellModelProvider {
 
-    var providerDelegate: ___VARIABLE_productName___CellDelegate? { 
-        return self
-    }
-
     var rowHeight: CGFloat {
         return 44.0
-    }
-}
-
-// MARK: - ___VARIABLE_productName___CellDelegate
-
-extension ___VARIABLE_productName___CellModel: ___VARIABLE_productName___CellDelegate {
-    func onExampleAction(_ cell: ___VARIABLE_productName___Cell) {
-        // do something
     }
 }

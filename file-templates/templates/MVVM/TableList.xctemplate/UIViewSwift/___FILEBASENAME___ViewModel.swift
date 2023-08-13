@@ -14,6 +14,8 @@ protocol ___VARIABLE_productName:identifier___ViewModelDatasource {
     func itemForRowAt(_ indexPath: IndexPath) -> ___VARIABLE_productName___CellModel?
     
     func heightForRowAt(_ indexPath: IndexPath) -> CGFloat
+
+    func onDidSelectRowAt(_ indexPath: IndexPath)
 }
 
 /// UI 交互的协议,获取所在控制器,进行页面调整或者push
@@ -77,7 +79,7 @@ final class ___VARIABLE_productName:identifier___ViewModel {
 
 extension ___VARIABLE_productName:identifier___ViewModel: ___VARIABLE_productName:identifier___ViewModelDatasource {
 
-  func numberOfSections() -> Int {
+    func numberOfSections() -> Int {
         return 1
     }
     
@@ -97,5 +99,10 @@ extension ___VARIABLE_productName:identifier___ViewModel: ___VARIABLE_productNam
             return 44
         }
         return cellModel.rowHeight
+    }
+
+    func onDidSelectRowAt(_ indexPath: IndexPath) {
+        guard let cellModel = itemForRowAt(indexPath) else { return }
+        
     }
 }
