@@ -16,7 +16,7 @@ final class ___VARIABLE_productName:identifier___View: UIView {
 
     // MARK: - Init
 
-   override init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
     }
 

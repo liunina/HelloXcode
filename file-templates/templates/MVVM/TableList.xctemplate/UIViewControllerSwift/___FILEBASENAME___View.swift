@@ -24,7 +24,7 @@ final class ___VARIABLE_productName:identifier___View: UIView {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = .clear
         tableView.separatorStyle = .singleLine
         tableView.rowHeight = 48
         if #available(iOS 15.0, *) {
@@ -52,16 +52,6 @@ final class ___VARIABLE_productName:identifier___View: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // MARK: - Public
-    
-    func reloadData() {
-         self.tableView.reloadData()
-//        DispatchQueue.main.dispatchMainIfNeeded { [weak self] in
-//            guard let self = self else { return }
-//            
-//        }
-    }
-    
     // MARK: - UIComponents
 
     func addUIComponents() {
@@ -81,12 +71,30 @@ final class ___VARIABLE_productName:identifier___View: UIView {
  
     func setupBindings() {
         onUpdateUIComponents()
+        self.viewModel.reloadSubject.subscribe { [weak self] ret in
+            guard let self = self else { return }
+            self.reloadData()
+        }.disposed(by: disposeBag)
     }
 
     func onUpdateUIComponents() {
 
     }
 
+}
+
+// MARK: - Public
+
+extension ___VARIABLE_productName:identifier___View {
+
+    func reloadData() {
+        onUpdateUIComponents()
+        self.tableView.reloadData()
+//        DispatchQueue.main.dispatchMainIfNeeded { [weak self] in
+//            guard let self = self else { return }
+//            
+//        }
+    }
 }
 
 // MARK: - UITableViewDataSource & UITableViewDelegate

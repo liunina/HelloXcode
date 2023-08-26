@@ -2,6 +2,7 @@
 //  Summary: ___VARIABLE_Summary___
 
 import Foundation
+import RxSwift
 
 // 数据源
 protocol ___VARIABLE_productName:identifier___ViewModelDatasource: AnyObject {
@@ -20,13 +21,20 @@ final class ___VARIABLE_productName:identifier___ViewModel {
     // MARK: - Inputs
     
     weak var delegate: ___VARIABLE_productName:identifier___ViewModelDelegate?
-    
+    /// 页面刷新事件
+    let reloadSubject: PublishSubject<Bool> = .init()
+
     // MARK: - Outputs
 
     // MARK: - Init
 
     init() {
 
+    }
+
+    /// 刷新页面事件
+    private func reloadUI() {
+        reloadSubject.onNext(true)
     }
 }
 

@@ -3,10 +3,12 @@
 
 import UIKit
 import SnapKit
+import RxSwift
 
 final class ___VARIABLE_productName:identifier___View: UIView {
     
     // MARK: - Private properties
+//    private var disposeBag = DisposeBag()
     
     private var viewModel: ___VARIABLE_productName:identifier___ViewModel {
         didSet {
@@ -46,6 +48,10 @@ final class ___VARIABLE_productName:identifier___View: UIView {
    
     func setupBindings() {
         onUpdateUIComponents()
+        self.viewModel.reloadSubject.subscribe { [weak self] ret in
+            guard let self = self else { return }
+            self.onUpdateUIComponents()
+        }.disposed(by: disposeBag)
     }
 
     func onUpdateUIComponents() {

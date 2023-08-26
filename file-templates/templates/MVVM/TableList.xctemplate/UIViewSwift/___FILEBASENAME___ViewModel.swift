@@ -63,7 +63,8 @@ final class ___VARIABLE_productName:identifier___ViewModel {
         self.cellModels.append(contentsOf: cellModels)
     }
     
-    private func reload() {
+    /// 刷新UI
+    private func reloadUI() {
         reloadSubject.onNext(true)
     }
 
