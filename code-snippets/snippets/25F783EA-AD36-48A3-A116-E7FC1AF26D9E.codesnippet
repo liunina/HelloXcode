@@ -3,26 +3,31 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ms_layout_make</string>
+	<string>lz_textField</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[&lt;#view#&gt; mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.height.mas_equalTo(25);
-    make.top.equalTo(self.contentView.mas_top).offset(0);
-    make.left.equalTo(self.contentView.mas_left).offset(0);
-    make.right.equalTo(self.contentView.mas_right).offset(0);
-}];</string>
+	<string>- (UITextField *)textField {
+    if (!_textField) {
+        UITextField *textField = [[UITextField alloc] initWithFrame:CGRectZero];
+        textField.textColor = [UIColor colorWithRGB:0x111111];
+        textField.font = [UIFont systemFontOfSize:13];
+        textField.textAlignment = NSTextAlignmentLeft;
+        [self.contentView addSubview:textField];
+        _textField = textField;
+    }
+    return _textField;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>2D3F8E87-27D5-4387-B9AD-8EA3B6C99310</string>
+	<string>25F783EA-AD36-48A3-A116-E7FC1AF26D9E</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Masony</string>
+	<string>Lazy UITextField</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

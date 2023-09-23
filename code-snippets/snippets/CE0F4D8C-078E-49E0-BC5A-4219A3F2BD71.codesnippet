@@ -10,9 +10,13 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>    private lazy var tableView: UITableView = {
+        let backgroundView = UIView(frame: CGRect(x: 0, y: 0, width: kScreenW, height: kScreenH))
+        backgroundView.backgroundColor = .white
+        
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.backgroundView = backgroundView
         tableView.backgroundColor = .white
         tableView.separatorStyle = .none
         tableView.rowHeight = 48

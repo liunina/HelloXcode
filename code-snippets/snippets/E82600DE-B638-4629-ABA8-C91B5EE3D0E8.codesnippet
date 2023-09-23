@@ -16,6 +16,9 @@
         textField.delegate = &lt;#property name#&gt;
         textField.textColor = UIColor.darkText
         textField.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
+        textField.autocapitalizationType = .none
+        textField.spellCheckingType = .no
+        textField.autocorrectionType = .no
         return textField
     }()</string>
 	<key>IDECodeSnippetIdentifier</key>

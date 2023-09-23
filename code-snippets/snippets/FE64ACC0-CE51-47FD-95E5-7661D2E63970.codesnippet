@@ -6,7 +6,7 @@
 	<string>oc_lz_button</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>- (void)onActionWithButton:(UIButton *)sender {
@@ -22,7 +22,7 @@
         [button setTitle:@"button" forState:UIControlStateNormal];
         [button setImage:[UIImage imageNamed:@"back_icon_arrow"] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(onActionWithButton:) forControlEvents:UIControlEventTouchUpInside];
-        [self.view addSubview:button];
+        [self.contentView addSubview:button];
         &lt;#button#&gt; = button;
     }
     return &lt;#button#&gt;;

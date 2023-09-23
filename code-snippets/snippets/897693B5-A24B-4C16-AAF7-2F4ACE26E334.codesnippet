@@ -3,26 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ms_layout_make</string>
+	<string>oc_lz_customView</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[&lt;#view#&gt; mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.height.mas_equalTo(25);
-    make.top.equalTo(self.contentView.mas_top).offset(0);
-    make.left.equalTo(self.contentView.mas_left).offset(0);
-    make.right.equalTo(self.contentView.mas_right).offset(0);
-}];</string>
+	<string>- (&lt;#UIView#&gt; *)&lt;#propertyname#&gt; {
+    if (!&lt;#propertyname#&gt;) {
+        &lt;#UIView#&gt; *view = [[&lt;#UIView#&gt; alloc] initWithFrame:CGRectZero];
+        [self.contentView addSubview:view];
+        &lt;#propertyname#&gt; = view;
+    }
+    return &lt;#propertyname#&gt;;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>2D3F8E87-27D5-4387-B9AD-8EA3B6C99310</string>
+	<string>897693B5-A24B-4C16-AAF7-2F4ACE26E334</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Masony</string>
+	<string>Lazy CustomView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
