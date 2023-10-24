@@ -7,7 +7,7 @@ class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_cocoaTouchSubclass___ {
 
     // MARK: - Porperties
     
-    public var provider: ___FILEBASENAMEASIDENTIFIER___ModelProvider? {
+    public var cellModel: ___VARIABLE_productName___Model? {
         didSet {
             setupBindings()
         }
@@ -37,7 +37,7 @@ class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_cocoaTouchSubclass___ {
     }
     
     public func onUpdateUIComponents() {
-        guard let provider = self.provider else { return }
+        guard let cellModel = self.cellModel else { return }
         // Configure components for provider
     }
 

@@ -110,13 +110,12 @@ extension ___VARIABLE_productName:identifier___View: UITableViewDataSource, UITa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "___VARIABLE_productName___Cell", for: indexPath) as! ___VARIABLE_productName___Cell
-//        let cell = tableView.dequeueReusableCellClass(for: indexPath) as ___VARIABLE_productName___Cell
         cell.selectionStyle = .none
         guard let cellModel = viewModel.itemForRowAt(indexPath) else {
             return cell
         }
         
-        cell.provider = cellModel
+        cell.cellModel = cellModel
         return cell
     }
     

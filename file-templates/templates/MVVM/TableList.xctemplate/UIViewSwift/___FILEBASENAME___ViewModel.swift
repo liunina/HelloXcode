@@ -64,14 +64,14 @@ final class ___VARIABLE_productName:identifier___ViewModel {
     }
     
     /// 刷新UI
-    private func reloadUI() {
+    private func onReloadUI() {
         reloadSubject.onNext(true)
     }
 
     // MARK: - Public
     
     func onRefresh() {    
-        reload()
+        onReloadUI()
     }
 
 }

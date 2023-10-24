@@ -5,7 +5,7 @@ import SnapKit
 
 class ___VARIABLE_productName___Cell: UITableViewCell {
     
-    public var provider: ___VARIABLE_productName___CellModelProvider? {
+    public var cellModel: ___VARIABLE_productName___CellModel? {
         didSet {
             setupBindings()
         }
@@ -35,7 +35,7 @@ class ___VARIABLE_productName___Cell: UITableViewCell {
     }
     
     public func onUpdateUIComponents() {
-        guard let provider = self.provider else { return }
+        guard let cellModel = self.cellModel else { return }
         // Configure components for provider
     }
 

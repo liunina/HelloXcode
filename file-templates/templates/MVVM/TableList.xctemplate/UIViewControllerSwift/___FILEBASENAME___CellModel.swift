@@ -3,7 +3,7 @@
 import UIKit
 
 // 列表视图数据源
-@objc protocol ___VARIABLE_productName___CellModelProvider: AnyObject {
+protocol ___VARIABLE_productName___CellModelDatasource {
 
     /// 行高
     var rowHeight: CGFloat { get }
@@ -35,9 +35,9 @@ class ___VARIABLE_productName___CellModel: NSObject {
     }
 }
 
-// MARK: - ___VARIABLE_productName___CellModelProvider
+// MARK: - ___VARIABLE_productName___CellModelDatasource
 
-extension ___VARIABLE_productName___CellModel: ___VARIABLE_productName___CellModelProvider {
+extension ___VARIABLE_productName___CellModel: ___VARIABLE_productName___CellModelDatasource {
 
     var rowHeight: CGFloat {
         return 44.0

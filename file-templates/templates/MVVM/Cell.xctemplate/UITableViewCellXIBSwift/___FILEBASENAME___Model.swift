@@ -3,7 +3,7 @@
 import UIKit
 
 // 列表视图数据源
-@objc protocol ___FILEBASENAMEASIDENTIFIER___ModelProvider: AnyObject {
+protocol ___FILEBASENAMEASIDENTIFIER___ModelDatasource {
 
     /// 行高
     var rowHeight: CGFloat { get }
@@ -35,9 +35,9 @@ class ___FILEBASENAMEASIDENTIFIER___Model: NSObject {
     }
 }
 
-// MARK: - ___FILEBASENAMEASIDENTIFIER___ModelProvider
+// MARK: - ___FILEBASENAMEASIDENTIFIER___ModelDatasource
 
-extension ___FILEBASENAMEASIDENTIFIER___Model: ___FILEBASENAMEASIDENTIFIER___ModelProvider {
+extension ___FILEBASENAMEASIDENTIFIER___Model: ___FILEBASENAMEASIDENTIFIER___ModelDatasource {
 
     var rowHeight: CGFloat {
         return 44.0
