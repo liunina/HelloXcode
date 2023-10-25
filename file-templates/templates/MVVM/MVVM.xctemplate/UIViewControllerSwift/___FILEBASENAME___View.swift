@@ -43,12 +43,12 @@ final class ___VARIABLE_productName:identifier___View: UIView {
             make.edges.equalTo(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
         }
     }
-    
-    func onUpdateUIComponents() {
 
-    }
-    
     func setupBindings() {
         onUpdateUIComponents()
+    }
+
+    func onUpdateUIComponents() {
+
     }
 }
