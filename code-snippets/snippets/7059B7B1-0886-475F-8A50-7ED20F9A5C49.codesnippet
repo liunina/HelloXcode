@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ln_rac_reload_subjec</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/// 刷新
+@property (nonatomic, strong, readonly) RACSubject &lt;NSNumber *&gt; *reloadSubject;
+@property (nonatomic, strong, readwrite) RACSubject &lt;NSNumber *&gt; *reloadSubject;
+
+- (RACSubject &lt;NSNumber *&gt; *)reloadSubject{
+    if(!_reloadSubject){
+        _reloadSubject = [RACSubject new];
+    }
+    return _reloadSubject;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7059B7B1-0886-475F-8A50-7ED20F9A5C49</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>RACSubject reloadSubject</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
