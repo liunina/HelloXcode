@@ -33,5 +33,5 @@ final class ___VARIABLE_productName:identifier___ViewModel {
 // MARK: - ___VARIABLE_productName:identifier___ViewModelDatasource
 
 extension ___VARIABLE_productName:identifier___ViewModel: ___VARIABLE_productName:identifier___ViewModelDatasource {
-    
+
 }

@@ -30,11 +30,11 @@
 	<array>
 		<dict>
 			<key>Identifier</key>
-			<string>productName</string>
+			<string>VIEWNAME</string>
 			<key>Name</key>
-			<string>Module name:</string>
+			<string>View name:</string>
 			<key>Description</key>
-			<string>Name of module you want to implement</string>
+			<string>The name of the view to create.</string>
 			<key>Required</key>
 			<true/>
 			<key>Default</key>
@@ -44,9 +44,9 @@
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_MODULENAME___</string>
+			<string>___VARIABLE_VIEWNAME___</string>
 			<key>Identifier</key>
-			<string>MODULENAME</string>
+			<string>productName</string>
 			<key>Type</key>
 			<string>static</string>
 		</dict>
