@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lz_button_text</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>lazy var &lt;#plainTextButton#&gt;: UIButton = {
+    let button = UIButton(type: .custom)
+    button.setTitle("##", for: .normal)
+    button.setTitleColor(.black, for: .normal)
+    button.setTitleColor(.gray, for: .highlighted)
+    button.titleLabel?.font = ABFont.PingFangSC_Regular(12)
+    button.contentHorizontalAlignment = .left
+    button.addTarget(self, action: #selector(onPlainButtonTapAction(_:)), for: .touchUpInside)
+    return button
+}()
+
+// event
+@objc private func onPlainButtonTapAction(_ sender: UIButton) {}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F492818A-39A8-4BC1-B364-86A76A8C71DC</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Lazy Button plaintext</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

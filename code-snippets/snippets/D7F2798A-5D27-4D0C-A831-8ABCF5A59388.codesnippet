@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>guard let self = self else { return }</string>
+	<string>guard let `self` = self else { return }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>D7F2798A-5D27-4D0C-A831-8ABCF5A59388</string>
 	<key>IDECodeSnippetLanguage</key>

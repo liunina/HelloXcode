@@ -3,28 +3,43 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lz_content</string>
+	<string>ln_create_view_sample</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private lazy var &lt;#contentView#&gt;: UIView = {
-    let view = UIView()
-    view.backgroundColor = .white
-    return view
-}()</string>
+	<string>class &lt;#name#&gt;: UIView {
+    
+    // MARK: - UIComponents
+
+    func addUIComponents() {
+       
+    }
+    
+    func layoutUIComponents() {
+     
+    }
+ 
+    func setupBindings() {
+        onUpdateUIComponents()
+    }
+
+    func onUpdateUIComponents() {
+
+    }
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>8AC85BC5-3428-4497-A7C8-3320C8BD3611</string>
+	<string>E137B87A-CD32-411D-B88D-06F1F0929177</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Lazy ContentView</string>
+	<string>Create Custom Sample View</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
