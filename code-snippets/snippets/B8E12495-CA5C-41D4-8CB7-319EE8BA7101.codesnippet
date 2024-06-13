@@ -3,46 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ln_create_view_sample</string>
+	<string>oc_imp2</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>class &lt;#name#&gt;: UIView {
-    
-    // MARK: - override
-    
-    override open var intrinsicContentSize: CGSize {
-        return .zero
-    }
-    
-    // MARK: - UIComponents
-
-    func addUIComponents() {
-       
-    }
-    
-    func layoutUIComponents() {
-     
-    }
- 
-    func setupBindings() {
-        onUpdateUIComponents()
-    }
-
-    func onUpdateUIComponents() {
-
-    }
-}</string>
+	<string>#import &lt;&lt;#framework#&gt;&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>E137B87A-CD32-411D-B88D-06F1F0929177</string>
+	<string>B8E12495-CA5C-41D4-8CB7-319EE8BA7101</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Create Custom Sample View</string>
+	<string>import framework</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

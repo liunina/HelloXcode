@@ -18,6 +18,11 @@
         return view
     }()
     
+    // MARK: - override
+    
+    override open var intrinsicContentSize: CGSize {
+        return .zero
+    }
     // MARK: - UIComponents
 
     func addUIComponents() {
