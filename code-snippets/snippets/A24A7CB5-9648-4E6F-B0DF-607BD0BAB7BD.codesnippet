@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ln_userdefault_key</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>enum UserDefaultsKey: String {
+    case &lt;#key#&gt;
+    
+    static subscript&lt;T&gt;(key: Self, type: T.Type = T.self) -&gt; T? {
+        get {
+            UserDefaults.standard.object(forKey: key.rawValue) as? T
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: key.rawValue)
+        }
+    }
+    
+    func remove() {
+        UserDefaults.standard.removeObject(forKey: rawValue)
+    }
+    
+    var exists: Bool {
+        UserDefaults.standard.object(forKey: rawValue) != nil
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A24A7CB5-9648-4E6F-B0DF-607BD0BAB7BD</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>let hh: String = UserDefaultsKey[.login]</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UserDefaults Key</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

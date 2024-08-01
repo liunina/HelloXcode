@@ -3,23 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ln_after</string>
+	<string>markg</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>TopLevel</string>
+		<string>CodeBlock</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) { [weak self] in
-                
-            }</string>
+	<string>// MARK: - &lt;#Section name#&gt;
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>034F7F70-165D-4E2D-BEC7-D44023AF827C</string>
+	<string>FAAF7A09-8B0C-4EA5-B900-1D95F71EDF5B</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>延迟 </string>
+	<string>Adds Mark: - delimited in code</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>DispatchQuee main after</string>
+	<string>Mark - Generic</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

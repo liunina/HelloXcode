@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>ln_after</string>
+	<string>bnd</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) { [weak self] in
-                
-            }</string>
+	<string>@Binding private var &lt;#name#&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>034F7F70-165D-4E2D-BEC7-D44023AF827C</string>
+	<string>0CF5D818-CDF7-4FEF-8BB2-416B1624991A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>延迟 </string>
+	<string>Create a private property decorated with @Binding property wrapper</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>DispatchQuee main after</string>
+	<string>SwiftUI Binding property</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

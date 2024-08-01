@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ln_shared_user_default</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>enum UserDefaultsKey: String {
+    case &lt;#key#&gt;
+    
+    private static let sharedUserDefaults = UserDefaults(suiteName: &lt;#appGroupId#&gt;)!
+    
+    static subscript&lt;T&gt;(key: Self, type: T.Type = T.self) -&gt; T? {
+        get {
+            sharedUserDefaults.object(forKey: key.rawValue) as? T
+        }
+        set {
+            sharedUserDefaults.set(newValue, forKey: key.rawValue)
+        }
+    }
+    
+    func remove() {
+        UserDefaultsKey.sharedUserDefaults.removeObject(forKey: rawValue)
+    }
+    
+    var exists: Bool {
+        UserDefaultsKey.sharedUserDefaults.object(forKey: rawValue) != nil
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>55B19D97-78ED-4010-BAE8-5BD0A360EC19</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Shared UserDefaults</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
