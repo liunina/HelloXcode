@@ -29,7 +29,7 @@
     // TODO: implement
 }
 
-- (void)onSetuBinding {
+- (void)onDataBindings {
     [self onUpdateUIComponents];
     // binding implement
 }

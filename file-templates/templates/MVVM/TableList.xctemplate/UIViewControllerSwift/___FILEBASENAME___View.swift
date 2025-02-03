@@ -10,7 +10,7 @@ final class ___VARIABLE_productName:identifier___View: UIView {
     
     private var viewModel: ___VARIABLE_productName:identifier___ViewModel {
         didSet {
-            setupBindings()
+            onDataBindings()
         }
     }
 
@@ -54,12 +54,12 @@ final class ___VARIABLE_productName:identifier___View: UIView {
 
     // MARK: - UIComponents
 
-    func addUIComponents() {
+    func onInitUIComponents() {
         addSubview(contentView)
         contentView.addSubview(tableView)
     }
     
-    func layoutUIComponents() {
+    func onLayoutUIComponents() {
         contentView.snp.makeConstraints { make in
             make.edges.equalTo(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
         }
@@ -68,19 +68,18 @@ final class ___VARIABLE_productName:identifier___View: UIView {
             make.edges.equalToSuperview()
         }
     }
- 
-    func setupBindings() {
+    
+    func onUpdateUIComponents() {
+
+    }
+
+    func onDataBindings() {
         onUpdateUIComponents()
         self.viewModel.reloadSubject.subscribe { [weak self] ret in
             guard let self = self else { return }
             self.reloadData()
         }.disposed(by: disposeBag)
     }
-
-    func onUpdateUIComponents() {
-
-    }
-
 }
 
 // MARK: - Public

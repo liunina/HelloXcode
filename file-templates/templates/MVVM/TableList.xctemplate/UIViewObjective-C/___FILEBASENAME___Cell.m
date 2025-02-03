@@ -17,7 +17,7 @@
     
 }
 
-- (void)onSetupBinding {
+- (void)onDataBindings {
     [self onUpdateUIComponents];
 }
 
@@ -26,7 +26,7 @@
 - (void)setCellModel:(___VARIABLE_productName___CellModel *)cellModel {
     if (_cellModel != cellModel) {
         _cellModel = cellModel;
-        [self onSetupBinding];
+        [self onDataBindings];
     }
 }
 

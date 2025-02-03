@@ -9,7 +9,7 @@ class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_cocoaTouchSubclass___ {
     
     public var cellModel: ___VARIABLE_productName___Model? {
         didSet {
-            setupBindings()
+            onDataBindings()
         }
     }
     
@@ -22,23 +22,24 @@ class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_cocoaTouchSubclass___ {
     
     // MARK: - UIComponents
     
-    public func addUIComponents() {
+    public func onInitUIComponents() {
         contentView.addSubview(containerView)
     }
     
-    public func layoutUIComponents() {
+    public func onLayoutUIComponents() {
         containerView.snp.makeConstraints { make in
             make.edges.equalTo(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
         }
     }
-
-    public func setupBindings() {
-        onUpdateUIComponents()
-    }
-    
+ 
     public func onUpdateUIComponents() {
         guard let cellModel = self.cellModel else { return }
         // Configure components for provider
     }
+    
+    public func onDataBindings() {
+        onUpdateUIComponents()
+    }
+   
 
 }

@@ -18,6 +18,9 @@ final class ___VARIABLE_productName:identifier___View: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        onInitUIComponents()
+        onLayoutUIComponents()
+        onDataBindings()
     }
 
     @available(*, unavailable)
@@ -28,12 +31,12 @@ final class ___VARIABLE_productName:identifier___View: UIView {
     // MARK: - UIComponents
 
     // 视图加载
-    func addUIComponents() {
+    func onInitUIComponents() {
         addSubview(contentView)
     }
     
     // 布局
-    func layoutUIComponents() {
+    func onLayoutUIComponents() {
         contentView.snp.makeConstraints { make in
             make.edges.equalTo(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
         }
@@ -43,5 +46,9 @@ final class ___VARIABLE_productName:identifier___View: UIView {
     func onUpdateUIComponents() {
 
     }
-    
+
+       /// 数据绑定
+    func onDataBindings() {
+        onUpdateUIComponents()
+    }
 }

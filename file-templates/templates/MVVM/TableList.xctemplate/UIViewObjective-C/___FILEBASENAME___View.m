@@ -41,7 +41,7 @@
     // TODO: implement
 }
 
-- (void)onSetuBinding {
+- (void)onDataBindings {
     [self onUpdateUIComponents];
     // binding implement
 }
@@ -83,7 +83,7 @@
 - (void)setViewModel:(___VARIABLE_productName___ViewModel *)viewModel {
     if (_viewModel != viewModel) {
         _viewModel = viewModel;
-        [self onSetuBinding];
+        [self onDataBindings];
     }
 }
 

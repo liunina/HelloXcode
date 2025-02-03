@@ -41,11 +41,11 @@ final class ___VARIABLE_productName:identifier___ViewController: UIViewControlle
 
     // MARK: override
 
-    func addUIComponents() {
+    func onInitUIComponents() {
         self.view.addSubview(mainView)
     }
     
-    func layoutUIComponents() {
+    func onLayoutUIComponents() {
         mainView.snp.makeConstraints { make in
             make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
             make.left.equalTo(self.view.snp.left)
@@ -54,7 +54,7 @@ final class ___VARIABLE_productName:identifier___ViewController: UIViewControlle
         }
     }
     
-    func setupBindings() {
+    func onDataBindings() {
          
     }
 }

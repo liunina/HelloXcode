@@ -7,7 +7,7 @@ class ___VARIABLE_productName___Cell: UITableViewCell {
     
     public var cellModel: ___VARIABLE_productName___CellModel? {
         didSet {
-            setupBindings()
+            onDataBindings()
         }
     }
     
@@ -20,18 +20,14 @@ class ___VARIABLE_productName___Cell: UITableViewCell {
     
     // MARK: - UIComponents
     
-    public func addUIComponents() {
+    public func onInitUIComponents() {
         contentView.addSubview(containerView)
     }
     
-    public func layoutUIComponents() {
+    public func onLayoutUIComponents() {
         containerView.snp.makeConstraints { make in
             make.edges.equalTo(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
         }
-    }
-
-    public func setupBindings() {
-        onUpdateUIComponents()
     }
     
     public func onUpdateUIComponents() {
@@ -39,4 +35,8 @@ class ___VARIABLE_productName___Cell: UITableViewCell {
         // Configure components for provider
     }
 
+    public func onDataBindings() {
+        onUpdateUIComponents()
+    }
+    
 }
