@@ -19,21 +19,22 @@
     
     // MARK: - UIComponents
 
-    func addUIComponents() {
+    func onInitUIComponents() {
        
     }
     
-    func layoutUIComponents() {
+    func onLayoutUIComponents() {
      
     }
  
-    func setupBindings() {
-        onUpdateUIComponents()
-    }
-
     func onUpdateUIComponents() {
 
     }
+    
+    func onDataBindings() {
+        onUpdateUIComponents()
+    }
+
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>E137B87A-CD32-411D-B88D-06F1F0929177</string>

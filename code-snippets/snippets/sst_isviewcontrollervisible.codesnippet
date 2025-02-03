@@ -9,13 +9,15 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    if (self.isViewLoaded &amp;&amp; self.view.window) {
-        // viewController is visible
-    }</string>
+	<string>if (self.isViewLoaded &amp;&amp; self.view.window) {
+    // viewController is visible
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>723109C5-8693-4086-B0BE-41EAC0331B7A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Is View Controller Visible</string>
 	<key>IDECodeSnippetUserSnippet</key>

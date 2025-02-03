@@ -12,8 +12,8 @@
 	<string>[&lt;#view#&gt; mas_makeConstraints:^(MASConstraintMaker *make) {
     make.height.mas_equalTo(25);
     make.top.equalTo(self.contentView.mas_top).offset(0);
-    make.left.equalTo(self.contentView.mas_left).offset(0);
-    make.right.equalTo(self.contentView.mas_right).offset(0);
+    make.leading.equalTo(self.contentView.mas_leading).offset(0);
+    make.trailing.equalTo(self.contentView.mas_trailing).offset(0);
 }];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>2D3F8E87-27D5-4387-B9AD-8EA3B6C99310</string>

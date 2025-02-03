@@ -9,10 +9,9 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>
-    void (^&lt;#variable name#&gt;)(void) = ^void() {
-        &lt;#insert code here#&gt;
-    };
+	<string>void (^&lt;#variable name#&gt;)(void) = ^void() {
+    &lt;#insert code here#&gt;
+};
     </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>0FB81DB7-B864-420D-B95A-FD1B1519C1EE</string>

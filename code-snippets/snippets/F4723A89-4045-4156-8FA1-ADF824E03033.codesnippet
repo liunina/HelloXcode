@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ln_oc_create_view</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@interface &lt;#customview#&gt; : UIView
+@property (nonatomic, strong) UIView *contentView;
+@end
+
+@implementation &lt;#customview#&gt;
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self onInitUIComponents];
+        [self onLayoutUIComponents];
+        [self onDataBindings];
+    }
+    return self;
+}
+
+#pragma mark - private
+
+- (void)onInitUIComponents {
+    [self addSubview:self.contentView];
+    self.contentView.backgroundColor = [UIColor blueColor];
+}
+
+- (void)onLayoutUIComponents {
+    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
+    }];
+}
+
+- (void)onUpdateUIComponents {
+    // TODO: implement
+}
+
+- (void)onDataBindings {
+    
+}
+
+#pragma mark - getter
+
+- (UIView *)contentView {
+    if (!_contentView) {
+        UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
+        _contentView = view;
+    }
+    return _contentView;
+}
+
+@end</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F4723A89-4045-4156-8FA1-ADF824E03033</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Create OC Custom View</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

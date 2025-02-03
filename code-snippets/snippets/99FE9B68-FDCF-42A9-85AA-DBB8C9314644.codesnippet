@@ -7,15 +7,15 @@
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeExpression</string>
-		<string>TopLevel</string>
 		<string>ClassImplementation</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    private lazy var &lt;#property name#&gt;: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleToFill
-        return imageView
-    }()</string>
+	<string>private lazy var &lt;#property name#&gt;: UIImageView = {
+    let imageView = UIImageView()
+    imageView.contentMode = .scaleToFill
+    return imageView
+}()</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>99FE9B68-FDCF-42A9-85AA-DBB8C9314644</string>
 	<key>IDECodeSnippetLanguage</key>

@@ -23,24 +23,29 @@
     override open var intrinsicContentSize: CGSize {
         return .zero
     }
+    
     // MARK: - UIComponents
-
-    func addUIComponents() {
+    
+    /// 构建和添加UI组件
+    func onInitUIComponents() {
         addSubview(contentView)
     }
     
-    func layoutUIComponents() {
+    /// 布局UI组件
+    func onLayoutUIComponents() {
         contentView.snp.makeConstraints { make in
             make.edges.equalTo(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
         }
     }
- 
-    func setupBindings() {
-        onUpdateUIComponents()
-    }
-
+    
+    /// 更新UI组件
     func onUpdateUIComponents() {
-
+        
+    }
+    
+    /// 数据绑定
+    func onDataBindings() {
+        onUpdateUIComponents()
     }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
